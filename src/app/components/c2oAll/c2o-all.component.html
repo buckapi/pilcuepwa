@@ -1,0 +1,613 @@
+<ngx-ui-loader 
+  [pbColor]="'#0A60C2'"  
+  [bgsColor]="'#0A60C2'"
+  [fgsColor]="'#0A60C2'"
+  [text]="'Cargando...'"
+  [fgsSize]="15"
+  [fgsType]= "'cube-grid'"
+  [textColor]="'#0A60C2'"
+  [overlayColor]="' rgba(255,255,255,0.8)'">
+</ngx-ui-loader>
+
+
+
+<!-- New Arrivals section start -->
+<!-- <section class="section-t-space">
+    <div class="custom-container">
+      <div class="title">
+        <h2>New Arrivals</h2>
+        <a >View All</a>
+      </div>
+  
+      <div class="row g-3">
+        <div class="col-6">
+          <div class="product-box">
+            <div class="product-box-img">
+              <a ><img class="img" src="assets/fuzzy/images/product/1.png" alt="p1" /></a>
+  
+              <div class="cart-box">
+                <a href="cart.html" class="cart-bag">
+                  <i class="iconsax bag" data-icon="basket-2"></i>
+                </a>
+              </div>
+            </div>
+            <div class="like-btn animate active inactive">
+              <img class="outline-icon" src="assets/fuzzy/images/svg/like.svg" alt="like" />
+              <img class="fill-icon" src="assets/fuzzy/images/svg/like-fill.svg" alt="like" />
+              <div class="effect-group">
+                <span class="effect"></span>
+                <span class="effect"></span>
+                <span class="effect"></span>
+                <span class="effect"></span>
+                <span class="effect"></span>
+              </div>
+            </div>
+            <div class="product-box-detail">
+              <h4>Buddy Chair</h4>
+              <h5>Modern saddle arms</h5>
+              <div class="bottom-panel">
+                <div class="price">
+                  <h4>$14 <del class="pev-price">$20</del></h4>
+                </div>
+                <div class="rating">
+                  <img src="assets/fuzzy/images/svg/Star.svg" alt="star" />
+                  <h6>4.5</h6>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+  
+        <div class="col-6">
+          <div class="product-box">
+            <div class="product-box-img">
+              <a >
+                <img class="img" src="assets/fuzzy/images/product/2.png" alt="p2" />
+              </a>
+  
+              <div class="cart-box">
+                <a href="cart.html" class="cart-bag">
+                  <i class="iconsax bag" data-icon="basket-2"></i>
+                </a>
+              </div>
+            </div>
+            <div class="like-btn animate inactive">
+              <img class="outline-icon" src="assets/fuzzy/images/svg/like.svg" alt="like" />
+              <img class="fill-icon" src="assets/fuzzy/images/svg/like-fill.svg" alt="like" />
+              <div class="effect-group">
+                <span class="effect"></span>
+                <span class="effect"></span>
+                <span class="effect"></span>
+                <span class="effect"></span>
+                <span class="effect"></span>
+              </div>
+            </div>
+            <div class="product-box-detail">
+              <h4>Wingback Chair</h4>
+              <h5>Modern saddle arms</h5>
+              <div class="bottom-panel">
+                <div class="price">
+                  <h4>$14 <del class="pev-price">$20</del></h4>
+                </div>
+                <div class="rating">
+                  <img src="assets/fuzzy/images/svg/Star.svg" alt="star" />
+                  <h6>4.5</h6>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section> -->
+  <!-- New Arrivals section end -->
+  
+  <!-- Trending Furniture section start -->
+  <section class="section-t-space" [hidden]="yeoman.view=='grid'" >
+    <div class="custom-container">
+      <div class="title">
+        <h2>Vista Lista</h2>
+        <a >Ver todos</a>
+      </div>
+  
+      <div class="row g-3">
+        <div class="col-12" (click)="setPreview(i)" *ngFor="let product of yeoman.all;let i = index" [hidden]="product.images[0]==undefined">
+          <div class="horizontal-product-box">
+            <a  class="horizontal-product-img" *ngIf="product.images[0]!==undefined">
+              <img class="img-fluid img" src="{{product.images[0]}}" alt="p3" />
+            </a>
+            <div class="horizontal-product-details">
+              <div class="d-flex align-items-center justify-content-between">
+                <h4>{{product.name}}</h4>
+                <div class="rating d-flex align-items-center">
+                  <img src="assets/fuzzy/images/svg/Star.svg" alt="star" />
+  
+                  <h6 class="theme-color fw-normal">4.5</h6>
+                </div>
+              </div>
+              <h5>Modern arms chairs</h5>
+  
+              <div class="d-flex align-items-center justify-content-between mt-1">
+                <div class="d-flex align-items-center gap-2">
+                  <h3 class="fw-semibold">${{product.price | number:'1.2-2' }}</h3>
+                  <!-- <h6 class="save">Save $10</h6> -->
+                </div>
+                <!-- <a  class="cart-bag">
+                  <i class="iconsax bag" data-icon="basket"></i>
+                </a> -->
+              </div>
+            </div>
+          </div>
+        </div>
+      
+      </div>
+    </div>
+  </section>
+  <!-- Trending Furniture section end -->
+  
+  <!-- banner section start -->
+  <!-- <section class="banner-wapper">
+    <div class="custom-container">
+      <div class="banner-bg">
+        <img class="img-fluid img-bg" src="assets/fuzzy/images/banner/banner-2.jpg" alt="banner-2" />
+        <div class="banner-content">
+          <h2 class="fw-semibold">Best Selling</h2>
+          <h4>Comforts & Modern life Stylish Sofa</h4>
+        </div>
+        <a  class="more-btn">
+          <h4>View More</h4>
+          <i class="iconsax right-arrow" data-icon="arrow-right"></i>
+        </a>
+      </div>
+    </div>
+  </section> -->
+  <!-- banner section end -->
+  
+  <!-- offer section start -->
+  <!-- <section class="offer-zone section-b-space pt-0">
+    <div class="custom-container">
+      <div class="title">
+        <h2>Offer Zone</h2>
+        <a >View All</a>
+      </div>
+  
+      <div class="swiper offer">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <div class="horizontal-product-box">
+              <a  class="horizontal-product-img">
+                <img class="img-fluid img" src="assets/fuzzy/images/product/6.png" alt="p6" />
+              </a>
+              <div class="horizontal-product-details">
+                <div class="d-flex align-items-center justify-content-between">
+                  <h4>Table Lamp</h4>
+                </div>
+                <h5>Bedroom Study Table Lamp</h5>
+                <div class="rating d-flex align-items-center gap-1 mt-1">
+                  <img src="assets/fuzzy/images/svg/Star.svg" alt="star" />
+  
+                  <img src="assets/fuzzy/images/svg/Star.svg" alt="star" />
+  
+                  <img src="assets/fuzzy/images/svg/Star.svg" alt="star" />
+  
+                  <img src="assets/fuzzy/images/svg/Star.svg" alt="star" />
+  
+                  <img src="assets/fuzzy/images/svg/Star.svg" alt="star" />
+                </div>
+  
+                <div class="d-flex align-items-center justify-content-between mt-1">
+                  <div class="d-flex align-items-center gap-2">
+                    <h3 class="fw-semibold">$37</h3>
+                  </div>
+                  <a href="cart.html" class="cart-bag">
+                    <i class="iconsax bag" data-icon="basket-2"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="horizontal-product-box mt-3">
+              <a  class="horizontal-product-img">
+                <img class="img-fluid img" src="assets/fuzzy/images/product/7.png" alt="p7" />
+              </a>
+              <div class="horizontal-product-details">
+                <div class="d-flex align-items-center justify-content-between">
+                  <h4>Side Table</h4>
+                </div>
+                <h5>Solid wood console table</h5>
+                <div class="rating d-flex align-items-center gap-1 mt-1">
+                  <img src="assets/fuzzy/images/svg/Star.svg" alt="star" />
+  
+                  <img src="assets/fuzzy/images/svg/Star.svg" alt="star" />
+  
+                  <img src="assets/fuzzy/images/svg/Star.svg" alt="star" />
+  
+                  <img src="assets/fuzzy/images/svg/Star.svg" alt="star" />
+  
+                  <img src="assets/fuzzy/images/svg/Star.svg" alt="star" />
+                </div>
+  
+                <div class="d-flex align-items-center justify-content-between mt-1">
+                  <div class="d-flex align-items-center gap-2">
+                    <h3 class="fw-semibold">$37</h3>
+                  </div>
+                  <a href="cart.html" class="cart-bag">
+                    <i class="iconsax bag" data-icon="basket-2"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="horizontal-product-box">
+              <a  class="horizontal-product-img">
+                <img class="img-fluid img" src="assets/fuzzy/images/product/8.png" alt="p8" />
+              </a>
+              <div class="horizontal-product-details">
+                <div class="d-flex align-items-center justify-content-between">
+                  <h4>Lounge Chair</h4>
+                </div>
+                <h5>Modern arms chair</h5>
+                <div class="rating d-flex align-items-center gap-1 mt-1">
+                  <img src="assets/fuzzy/images/svg/Star.svg" alt="star" />
+  
+                  <img src="assets/fuzzy/images/svg/Star.svg" alt="star" />
+  
+                  <img src="assets/fuzzy/images/svg/Star.svg" alt="star" />
+  
+                  <img src="assets/fuzzy/images/svg/Star.svg" alt="star" />
+  
+                  <img src="assets/fuzzy/images/svg/Star.svg" alt="star" />
+                </div>
+  
+                <div class="d-flex align-items-center justify-content-between mt-1">
+                  <div class="d-flex align-items-center gap-2">
+                    <h3 class="fw-semibold">$37</h3>
+                  </div>
+                  <a href="cart.html" class="cart-bag">
+                    <i class="iconsax bag" data-icon="basket-2"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="horizontal-product-box mt-3">
+              <a  class="horizontal-product-img">
+                <img class="img-fluid img" src="assets/fuzzy/images/product/9.png" alt="p9" />
+              </a>
+              <div class="horizontal-product-details">
+                <div class="d-flex align-items-center justify-content-between">
+                  <h4>Swing Chair</h4>
+                </div>
+                <h5>Modern steel swing chair</h5>
+                <div class="rating d-flex align-items-center gap-1 mt-1">
+                  <img src="assets/fuzzy/images/svg/Star.svg" alt="star" />
+  
+                  <img src="assets/fuzzy/images/svg/Star.svg" alt="star" />
+  
+                  <img src="assets/fuzzy/images/svg/Star.svg" alt="star" />
+  
+                  <img src="assets/fuzzy/images/svg/Star.svg" alt="star" />
+  
+                  <img src="assets/fuzzy/images/svg/Star.svg" alt="star" />
+                </div>
+  
+                <div class="d-flex align-items-center justify-content-between mt-1">
+                  <div class="d-flex align-items-center gap-2">
+                    <h3 class="fw-semibold">$37</h3>
+                  </div>
+                  <a href="cart.html" class="cart-bag">
+                    <i class="iconsax bag" data-icon="basket-2"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section> -->
+  <!-- offer section start -->
+  
+  <!-- other furniture section start -->
+  <section class="section-t-space" [hidden]="yeoman.view=='list'">
+    <div class="custom-container">
+      <div class="title">
+        <h2>Vista grid</h2>
+        <a >Ver todos</a>
+      </div>
+  
+      <div class="row g-4">
+        <div class="col-6" (click)="setPreview(i)" *ngFor="let product of yeoman.all;let i = index" [hidden]="product.images[0]==undefined">
+          <div class="product-box">
+            <div class="product-box-img">
+              <a > <img class="img" src="{{product.images[0]}}" alt="p10" /></a>
+  
+              <!-- <div class="cart-box">
+                <a href="cart.html" class="cart-bag">
+                  <i class="iconsax bag" data-icon="basket-2"></i>
+                </a>
+              </div> -->
+            </div>
+            <div class="like-btn animate active inactive">
+              <img class="outline-icon" src="assets/fuzzy/images/svg/like.svg" alt="like" />
+              <img class="fill-icon" src="assets/fuzzy/images/svg/like-fill.svg" alt="like" />
+  
+              <div class="effect-group">
+                <span class="effect"></span>
+                <span class="effect"></span>
+                <span class="effect"></span>
+                <span class="effect"></span>
+                <span class="effect"></span>
+              </div>
+            </div>
+            <div class="product-box-detail">
+              <h4>{{product.name}}</h4>
+              <div class="d-flex justify-content-between gap-3">
+                <h5>Precio</h5>
+                <h3 class="fw-semibold">${{product.price | number:'1.2-2' }}</h3>
+              </div>
+            </div>
+          </div>
+        </div>
+  
+        <!-- <div class="col-6">
+          <div class="product-box">
+            <div class="product-box-img">
+              <a > <img class="img" src="assets/fuzzy/images/product/11.png" alt="p11" /></a>
+  
+              <div class="cart-box">
+                <a href="cart.html" class="cart-bag">
+                  <i class="iconsax bag" data-icon="basket-2"></i>
+                </a>
+              </div>
+            </div>
+            <div class="like-btn animate inactive">
+              <img class="outline-icon" src="assets/fuzzy/images/svg/like.svg" alt="like" />
+              <img class="fill-icon" src="assets/fuzzy/images/svg/like-fill.svg" alt="like" />
+              <div class="effect-group">
+                <span class="effect"></span>
+                <span class="effect"></span>
+                <span class="effect"></span>
+                <span class="effect"></span>
+                <span class="effect"></span>
+              </div>
+            </div>
+            <div class="product-box-detail">
+              <h4>Lounge Chair</h4>
+              <div class="d-flex justify-content-between gap-3">
+                <h5>Modern arms chair</h5>
+                <h3 class="fw-semibold">$120</h3>
+              </div>
+            </div>
+          </div>
+        </div>
+  
+        <div class="col-6">
+          <div class="product-box">
+            <div class="product-box-img">
+              <a > <img class="img" src="assets/fuzzy/images/product/12.png" alt="p12" /></a>
+  
+              <div class="cart-box">
+                <a href="cart.html" class="cart-bag">
+                  <i class="iconsax bag" data-icon="basket-2"></i>
+                </a>
+              </div>
+            </div>
+            <div class="like-btn animate inactive">
+              <img class="outline-icon" src="assets/fuzzy/images/svg/like.svg" alt="like" />
+              <img class="fill-icon" src="assets/fuzzy/images/svg/like-fill.svg" alt="like" />
+  
+              <div class="effect-group">
+                <span class="effect"></span>
+                <span class="effect"></span>
+                <span class="effect"></span>
+                <span class="effect"></span>
+                <span class="effect"></span>
+              </div>
+            </div>
+            <div class="product-box-detail">
+              <h4>Double Bed Sheet</h4>
+              <div class="d-flex justify-content-between gap-3">
+                <h5>Modern double bed sheet</h5>
+                <h3 class="fw-semibold">$120</h3>
+              </div>
+            </div>
+          </div>
+        </div>
+  
+        <div class="col-6">
+          <div class="product-box">
+            <div class="product-box-img">
+              <a > <img class="img" src="assets/fuzzy/images/product/13.png" alt="p13" /></a>
+  
+              <div class="cart-box">
+                <a href="cart.html" class="cart-bag">
+                  <i class="iconsax bag" data-icon="basket-2"></i>
+                </a>
+              </div>
+            </div>
+            <div class="like-btn animate inactive">
+              <img class="outline-icon" src="assets/fuzzy/images/svg/like.svg" alt="like" />
+              <img class="fill-icon" src="assets/fuzzy/images/svg/like-fill.svg" alt="like" />
+              <div class="effect-group">
+                <span class="effect"></span>
+                <span class="effect"></span>
+                <span class="effect"></span>
+                <span class="effect"></span>
+                <span class="effect"></span>
+              </div>
+            </div>
+            <div class="product-box-detail">
+              <h4>Hanging Light</h4>
+              <div class="d-flex justify-content-between gap-3">
+                <h5>Metal hanging light</h5>
+                <h3 class="fw-semibold">$120</h3>
+              </div>
+            </div>
+          </div>
+        </div> -->
+      </div>
+    </div>
+  </section>
+  <!-- other furniture section end -->
+  
+  <!-- banner section start -->
+  <!-- <section class="banner-wapper grid-banner">
+    <div class="custom-container">
+      <div class="row">
+        <div class="col-6">
+          <div class="banner-bg">
+            <img class="img-fluid img-bg" src="assets/fuzzy/images/banner/banner-3.jpg" alt="banner-3" />
+            <div class="banner-content">
+              <h3>Wingback Chair</h3>
+            </div>
+            <a  class="more-btn d-block">
+              <i class="iconsax right-arrow" data-icon="arrow-right"></i>
+              <h3>View More</h3>
+            </a>
+            <div class="banner-bg"></div>
+          </div>
+        </div>
+  
+        <div class="col-6">
+          <div class="banner-bg">
+            <img class="img-fluid img-bg" src="assets/fuzzy/images/banner/banner-4.jpg" alt="banner-3" />
+            <div class="banner-content">
+              <h3>Wingback Chair</h3>
+            </div>
+            <a  class="more-btn d-block">
+              <i class="iconsax right-arrow" data-icon="arrow-right"></i>
+              <h3>View More</h3>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section> -->
+  <!-- banner section end -->
+  
+  <!-- filter offcanvas start -->
+  <div class="modal search-filter" id="search-filter" tabindex="-1">
+    <div class="modal-dialog modal-fullscreen">
+      <div class="modal-content">
+        <div class="modal-title">
+          <a href="landing.html" data-bs-dismiss="modal">
+            <i class="iconsax back-btn" data-icon="arrow-left"></i>
+          </a>
+          <h3 class="fw-semibold">Filter</h3>
+        </div>
+  
+        <div class="tab-body d-flex align-items-start">
+          <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+            <button class="nav-link active" id="v-pills-sort-tab" data-bs-toggle="pill" data-bs-target="#v-pills-sort" type="button" role="tab" aria-controls="v-pills-sort" aria-selected="true">Sort By</button>
+  
+            <button class="nav-link" id="v-pills-color-tab" data-bs-toggle="pill" data-bs-target="#v-pills-color" type="button" role="tab" aria-controls="v-pills-color" aria-selected="false">Color</button>
+  
+            <button class="nav-link" id="v-pills-price-tab" data-bs-toggle="pill" data-bs-target="#v-pills-price" type="button" role="tab" aria-controls="v-pills-price" aria-selected="false">Price</button>
+  
+            <button class="nav-link" id="v-pills-material-tab" data-bs-toggle="pill" data-bs-target="#v-pills-material" type="button" role="tab" aria-controls="v-pills-material" aria-selected="false">Material</button>
+          </div>
+  
+          <div class="tab-content" id="v-pills-tabContent">
+            <div class="tab-pane tab-info fade show active" id="v-pills-sort" role="tabpanel" aria-labelledby="v-pills-sort-tab" tabindex="0">
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="flexRadioDefault" id="radio1" />
+                <label class="form-check-label" for="radio1">Relevance</label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="radio" id="radio2" />
+                <label class="form-check-label" for="radio2">Highest Priced First</label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="radio" id="radio3" checked />
+                <label class="form-check-label" for="radio3">Lowest Priced First</label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="radio" id="radio4" />
+                <label class="form-check-label" for="radio4">Fastest Shipping</label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="radio" id="radio5" />
+                <label class="form-check-label" for="radio5">Newest</label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="radio" id="radio6" />
+                <label class="form-check-label" for="radio6">Highest Rating First</label>
+              </div>
+            </div>
+  
+            <div class="tab-pane tab-info color-info fade" id="v-pills-color" role="tabpanel" aria-labelledby="v-pills-color-tab" tabindex="0">
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="" id="color1" />
+                <label class="form-check-label" for="color1">Black</label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="" id="color2" />
+                <label class="form-check-label" for="color2">Gray</label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="" id="color3" />
+                <label class="form-check-label" for="color3">Blue</label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="" id="color4" />
+                <label class="form-check-label" for="color4">Yellow</label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="" id="color5" />
+                <label class="form-check-label" for="color5">Green</label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="" id="color6" />
+                <label class="form-check-label" for="color6">Red</label>
+              </div>
+            </div>
+  
+            <div class="tab-pane price-info fade" id="v-pills-price" role="tabpanel" aria-labelledby="v-pills-price-tab" tabindex="0">
+              <div class="range-slider">
+                <span>From <input type="number" value="250" min="0" max="100000" step="50" /> To <input type="number" value="750" min="0" max="1000" step="50" /> </span>
+                <input value="250" min="0" max="1000" step="50" type="range" />
+                <input value="500" min="0" max="1000" step="50" type="range" />
+                <svg width="100%" height="24">
+                  <line x1="4" y1="0" x2="480" y2="0" stroke="#444" stroke-width="12" stroke-dasharray="1 28"></line>
+                </svg>
+              </div>
+            </div>
+  
+            <div class="tab-pane tab-info fade" id="v-pills-material" role="tabpanel" aria-labelledby="v-pills-material-tab" tabindex="0">
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" name="flexRadioDefault" id="flexRadioDefault1" />
+                <label class="form-check-label" for="flexRadioDefault1">Fabric</label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" name="flexRadioDefault" id="flexRadioDefault2" checked />
+                <label class="form-check-label" for="flexRadioDefault2">Wooden</label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" name="flexRadioDefault" id="flexRadioDefault3" />
+                <label class="form-check-label" for="flexRadioDefault2">Metal</label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" name="flexRadioDefault" id="flexRadioDefault4" />
+                <label class="form-check-label" for="flexRadioDefault1">Plastic</label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" name="flexRadioDefault" id="flexRadioDefault5" />
+                <label class="form-check-label" for="flexRadioDefault2">Glass</label>
+              </div>
+            </div>
+          </div>
+        </div>
+  
+        <div class="footer-modal d-flex gap-3">
+          <a href="landing.html" class="btn gray-btn btn-inline mt-0 w-50">Clear Filter</a>
+          <a href="landing.html" class="theme-btn btn btn-inline mt-0 w-50" data-bs-dismiss="modal">apply</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- filter offcanvas end -->
+  
+  <!-- panel-space start -->
+  <section class="panel-space"></section>
+  <!-- panel-space end -->
+  

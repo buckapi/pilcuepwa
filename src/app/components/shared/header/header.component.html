@@ -1,0 +1,923 @@
+<!-- HEADER -->
+<header class="header">
+  <div class="header-actions">
+    <div class="header-brand">
+      <div class="logo" style="display: flex; justify-content: center; margin-left: 5%; cursor: pointer;" (click)="setRoute('dashboard')">
+        <img src="assets/vecimarket/img/logo.webp" style="padding: 15%; height: 64px; width: 64px;">
+        <svg class="icon-logo-vikinger small"></svg>
+      </div>
+      <h1 class="header-brand-text" style="margin-left:-10px;">Administrator</h1>
+    </div>
+  </div>
+  
+  <div class="header-actions">
+    <div class="sidemenu-trigger navigation-widget-trigger">
+      <svg class="icon-grid">
+        <use xlink:href="#svg-grid"></use>
+      </svg>
+    </div>
+    <div class="mobilemenu-trigger navigation-widget-mobile-trigger">
+      <div class="burger-icon inverted">
+        <div class="burger-icon-bar"></div>
+        <div class="burger-icon-bar"></div>
+        <div class="burger-icon-bar"></div>
+      </div>
+    </div>
+ 
+  
+    <nav class="navigation">
+      <ul class="menu-main">
+        <li class="menu-main-item">
+          <a class="menu-main-item-link" href="marketplace.html#">Productos</a>
+        </li>
+        <li class="menu-main-item">
+        </li>
+        <li class="menu-main-item">
+        </li>
+        <li class="menu-main-item">
+          <p class="menu-main-item-link">
+          </p>
+          <ul class="menu-main">
+            <li class="menu-main-item">
+              <a class="menu-main-item-link" href="marketplace.html#">About Us</a>
+            </li>
+            <li class="menu-main-item">
+              <a class="menu-main-item-link" href="marketplace.html#">Our Blog</a>
+            </li>
+            <li class="menu-main-item">
+              <a class="menu-main-item-link" href="marketplace.html#">Contact Us</a>
+            </li>
+            <li class="menu-main-item">
+              <a class="menu-main-item-link" href="marketplace.html#">Privacy Policy</a>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+  </div>
+  
+  <div class="header-actions search-bar">
+    <div class="interactive-input dark">
+      <input type="text" id="search-main" name="search_main" style="color: aliceblue !important;" placeholder="Buscar producto">
+      <div class="interactive-input-icon-wrap">
+        <svg class="interactive-input-icon icon-magnifying-glass">
+          <use xlink:href="#svg-magnifying-glass"></use>
+        </svg>
+      </div>
+      <div class="interactive-input-action">
+        <svg class="interactive-input-action-icon icon-cross-thin">
+          <use xlink:href="#svg-cross-thin"></use>
+        </svg>
+      </div>
+    </div>
+  
+    <div class="dropdown-box padding-bottom-small header-search-dropdown">
+      <div class="dropdown-box-category">
+        <p class="dropdown-box-category-title">Members</p>
+      </div>
+      <div class="dropdown-box-list small no-scroll">
+        <a class="dropdown-box-list-item" href="profile-timeline.html">
+          <div class="user-status notification">
+            <div class="user-status-avatar">
+              <div class="user-avatar small no-outline">
+                <div class="user-avatar-content">
+                  <div class="hexagon-image-30-32" data-src="assets/vecimarket/img/avatar/05.jpg"></div>
+                </div>
+                <div class="user-avatar-progress">
+                  <div class="hexagon-progress-40-44"></div>
+                </div>
+                <div class="user-avatar-progress-border">
+                  <div class="hexagon-border-40-44"></div>
+                </div>
+                <div class="user-avatar-badge">
+                  <div class="user-avatar-badge-border">
+                    <div class="hexagon-22-24"></div>
+                  </div>
+                  <div class="user-avatar-badge-content">
+                    <div class="hexagon-dark-16-18"></div>
+                  </div>
+                  <p class="user-avatar-badge-text">12</p>
+                </div>
+              </div>
+            </div>
+            <p class="user-status-title"><span class="bold">Neko Bebop</span></p>
+            <p class="user-status-text">1 friends in common</p>
+            <div class="user-status-icon">
+              <svg class="icon-friend">
+                <use xlink:href="#svg-friend"></use>
+              </svg>
+            </div>
+          </div>
+        </a>
+  
+        <a class="dropdown-box-list-item" href="profile-timeline.html">
+          <div class="user-status notification">
+            <div class="user-status-avatar">
+              <div class="user-avatar small no-outline">
+                <div class="user-avatar-content">
+                  <div class="hexagon-image-30-32" data-src="assets/vecimarket/img/avatar/15.jpg"></div>
+                </div>
+                <div class="user-avatar-progress">
+                  <div class="hexagon-progress-40-44"></div>
+                </div>
+                <div class="user-avatar-progress-border">
+                  <div class="hexagon-border-40-44"></div>
+                </div>
+                <div class="user-avatar-badge">
+                  <div class="user-avatar-badge-border">
+                    <div class="hexagon-22-24"></div>
+                  </div>
+                  <div class="user-avatar-badge-content">
+                    <div class="hexagon-dark-16-18"></div>
+                  </div>
+                  <p class="user-avatar-badge-text">7</p>
+                </div>
+              </div>
+            </div>
+            <p class="user-status-title"><span class="bold">Tim Rogers</span></p>
+            <p class="user-status-text">4 friends in common</p>
+            <div class="user-status-icon">
+              <svg class="icon-friend">
+                <use xlink:href="#svg-friend"></use>
+              </svg>
+            </div>
+          </div>
+        </a>
+      </div>
+  
+      <div class="dropdown-box-category">
+        <p class="dropdown-box-category-title">Groups</p>
+      </div>
+      <div class="dropdown-box-list small no-scroll">
+        <a class="dropdown-box-list-item" href="group-timeline.html">
+          <div class="user-status notification">
+            <div class="user-status-avatar">
+              <div class="user-avatar small no-border">
+                <div class="user-avatar-content">
+                  <div class="hexagon-image-40-44" data-src="assets/vecimarket/img/avatar/24.jpg"></div>
+                </div>
+              </div>
+            </div>
+            <p class="user-status-title"><span class="bold">Cosplayers of the World</span></p>
+            <p class="user-status-text">139 members</p>
+            <div class="user-status-icon">
+              <svg class="icon-group">
+                <use xlink:href="#svg-group"></use>
+              </svg>
+            </div>
+          </div>
+        </a>
+      </div>
+  
+      <div class="dropdown-box-category">
+        <p class="dropdown-box-category-title">Marketplace</p>
+      </div>
+  
+      <div class="dropdown-box-list small no-scroll">
+        <a class="dropdown-box-list-item" href="marketplace-product.html">
+          <div class="user-status no-padding-top">
+            <div class="user-status-avatar">
+              <figure class="picture small round liquid">
+                <img src="assets/vecimarket/img/marketplace/items/07.webp" alt="item-07">
+              </figure>
+            </div>
+            <p class="user-status-title"><span class="bold">Mercenaries White Frame</span></p>
+            <p class="user-status-text">By Neko Bebop</p>
+            <div class="user-status-icon">
+              <svg class="icon-marketplace">
+                <use xlink:href="#svg-marketplace"></use>
+              </svg>
+            </div>
+          </div>
+        </a>
+      </div>
+    </div>
+  </div>
+  
+  <div class="header-actions">
+    <div class="progress-stat">
+      <!-- <div id="logged-user-level" class="progress-stat-bar "></div> -->
+      <div class="bar-progress-wrap">
+        <p class="bar-progress-info" *ngIf="yeoman.config.clientSelected!=-1">Origin: {{clients[yeoman.config.clientSelected].name}}  <span class="bar-progress-text "></span></p>
+      </div>
+     
+    </div>
+  </div>
+
+    <div class="header-actions">
+
+      <div class="action-list dark">
+    
+        <div class="action-list-item-wrap">
+          <div class="action-list-item header-dropdown-trigger">
+            <svg class="action-list-item-icon icon-shopping-bag">
+              <use xlink:href="#svg-shopping-bag"></use>
+            </svg>
+          </div>
+        
+          <div class="dropdown-box no-padding-bottom header-dropdown">
+            <div class="dropdown-box-header">
+              <p class="dropdown-box-header-title">Shopping Cart <span class="highlighted">3</span></p>
+            </div>
+        
+            <div class="dropdown-box-list scroll-small no-hover" data-simplebar>
+              <div class="dropdown-box-list-item">
+                <div class="cart-item-preview">
+                  <a class="cart-item-preview-image" href="marketplace-product.html">
+                    <figure class="picture medium round liquid">
+                      <img [defaultImage]="'assets/vecimarket/img/marketplace/items/01.webp'" [errorImage]="'assets/vecimarket/img/marketplace/items/01.webp'" [lazyLoad]="'assets/vecimarket/img/marketplace/items/01.webp'" alt="Imagen">
+                    </figure>
+                  </a>
+        
+                  <p class="cart-item-preview-title"><a href="marketplace-product.html">Twitch Stream UI Pack</a></p>
+                  <p class="cart-item-preview-text">Regular License</p>
+                  <p class="cart-item-preview-price"><span class="highlighted">$</span> 12.00 x 1</p>
+        
+                  <div class="cart-item-preview-action">
+                    <svg class="icon-delete">
+                      <use xlink:href="#svg-delete"></use>
+                    </svg>
+                  </div>
+                </div>
+              </div>
+            </div>
+        
+            <div class="cart-preview-total">
+              <p class="cart-preview-total-title">Total:</p>
+              <p class="cart-preview-total-text"><span class="highlighted">$</span> 60.00</p>
+            </div>
+        
+            <div class="dropdown-box-actions">
+              <div class="dropdown-box-action">
+                <a class="button secondary" href="marketplace-cart.html">Shopping Cart</a>
+              </div>
+        
+              <div class="dropdown-box-action">
+                <a class="button primary" href="marketplace-checkout.html">Go to Checkout</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      
+  
+      
+        <div class="action-list-item-wrap">
+          <div class="action-list-item header-dropdown-trigger">
+            <svg class="action-list-item-icon icon-friend">
+              <use xlink:href="#svg-friend"></use>
+            </svg>
+          </div>
+        
+          <div class="dropdown-box header-dropdown">
+            <div class="dropdown-box-header">
+              <p class="dropdown-box-header-title">Friend Requestsz</p>
+        
+              <div class="dropdown-box-header-actions">
+                <p class="dropdown-box-header-action">Find Friends</p>
+                <p class="dropdown-box-header-action">Settings</p>
+              </div>
+            </div>
+        
+            <div class="dropdown-box-list no-hover" data-simplebar>
+        
+              <div class="dropdown-box-list-item">
+                <div class="user-status request">
+                  <a class="user-status-avatar" href="profile-timeline.html">
+                    <div class="user-avatar small no-outline">
+                      <div class="user-avatar-content">
+                        <div class="hexagon-image-30-32" data-src="assets/vecimarket/img/avatar/11.webp"></div>
+                      </div>
+                      <div class="user-avatar-progress">
+                        <div class="hexagon-progress-40-44"></div>
+                      </div>
+                      <div class="user-avatar-progress-border">
+                        <div class="hexagon-border-40-44"></div>
+                      </div>
+                      <div class="user-avatar-badge">
+                        <div class="user-avatar-badge-border">
+                          <div class="hexagon-22-24"></div>
+                        </div>
+                        <div class="user-avatar-badge-content">
+                          <div class="hexagon-dark-16-18"></div>
+                        </div>
+                        <p class="user-avatar-badge-text">9</p>
+                      </div>
+                    </div>
+                  </a>
+        
+                  <p class="user-status-title"><a class="bold" href="profile-timeline.html">Cassie May</a></p>
+                  <p class="user-status-text">4 friends in common</p>
+        
+                  <div class="action-request-list">
+                    <div class="action-request accept">
+                      <svg class="action-request-icon icon-add-friend">
+                        <use xlink:href="#svg-add-friend"></use>
+                      </svg>
+                    </div>
+                    <div class="action-request decline">
+                      <svg class="action-request-icon icon-remove-friend">
+                        <use xlink:href="#svg-remove-friend"></use>
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+        
+            <a class="dropdown-box-button secondary" href="hub-profile-requests.html">View all Requests</a>
+          </div>
+        </div>
+  
+      
+        <div class="action-list-item-wrap">
+          <div class="action-list-item header-dropdown-trigger">
+            <svg class="action-list-item-icon icon-messages">
+              <use xlink:href="#svg-messages"></use>
+            </svg>
+          </div>
+        
+          <div class="dropdown-box header-dropdown">
+            <div class="dropdown-box-header">
+              <p class="dropdown-box-header-title">Messages</p>
+              <div class="dropdown-box-header-actions">
+                <p class="dropdown-box-header-action">Mark all as Read</p>
+                <p class="dropdown-box-header-action">Settings</p>
+              </div>
+            </div>
+        
+            <div class="dropdown-box-list medium" data-simplebar>
+              <a class="dropdown-box-list-item" href="hub-profile-messages.html">
+                <div class="user-status">
+                  <div class="user-status-avatar">
+                    <div class="user-avatar small no-outline">
+                      <div class="user-avatar-content">
+                        <div class="hexagon-image-30-32" data-src="assets/vecimarket/img/avatar/04.jpg"></div>
+                      </div>
+                      <div class="user-avatar-progress">
+                        <div class="hexagon-progress-40-44"></div>
+                      </div>
+                      <div class="user-avatar-progress-border">
+                        <div class="hexagon-border-40-44"></div>
+                      </div>
+                      <div class="user-avatar-badge">
+                        <div class="user-avatar-badge-border">
+                          <div class="hexagon-22-24"></div>
+                        </div>
+                        <div class="user-avatar-badge-content">
+                          <div class="hexagon-dark-16-18"></div>
+                        </div>
+                        <p class="user-avatar-badge-text">6</p>
+                      </div>
+                    </div>
+                  </div>
+                  <p class="user-status-title"><span class="bold">Bearded Wonder</span></p>
+                  <p class="user-status-text">Great! Then will meet with them at the party...</p>
+                  <p class="user-status-timestamp floaty">29 mins ago</p>
+                </div>
+              </a>
+        
+              <a class="dropdown-box-list-item" href="hub-profile-messages.html">
+                <div class="user-status">
+                  <div class="user-status-avatar">
+                    <div class="user-avatar small no-outline">
+                      <div class="user-avatar-content">
+                        <div class="hexagon-image-30-32" data-src="assets/vecimarket/img/avatar/01.webp"></div>
+                      </div>
+                      <div class="user-avatar-progress">
+                        <div class="hexagon-progress-40-44"></div>
+                      </div>
+                      <div class="user-avatar-progress-border">
+                        <div class="hexagon-border-40-44"></div>
+                      </div>
+                      <div class="user-avatar-badge">
+                        <div class="user-avatar-badge-border">
+                          <div class="hexagon-22-24"></div>
+                        </div>
+                        <div class="user-avatar-badge-content">
+                          <div class="hexagon-dark-16-18"></div>
+                        </div>
+                        <p class="user-avatar-badge-text">26</p>
+                      </div>
+                    </div>
+                  </div>
+                  <p class="user-status-title"><span class="bold">Sarah Diamond</span></p>
+                  <p class="user-status-text">I'm sending you the latest news of the release...</p>
+                  <p class="user-status-timestamp floaty">16 hours ago</p>
+                </div>
+              </a>
+            </div>
+        
+            <a class="dropdown-box-button primary" href="hub-profile-messages.html">View all Messages</a>
+          </div>
+        </div>
+      
+        <div class="action-list-item-wrap">
+          <div class="action-list-item unread header-dropdown-trigger">
+            <svg class="action-list-item-icon icon-notification">
+              <use xlink:href="#svg-notification"></use>
+            </svg>
+          </div>
+        
+  
+          <div class="dropdown-box header-dropdown">
+          
+            <div class="dropdown-box-header">
+            
+              <p class="dropdown-box-header-title">Notifications</p>
+              <div class="dropdown-box-header-actions">
+                <p class="dropdown-box-header-action">Mark all as Read</p>
+                <p class="dropdown-box-header-action">Settings</p>
+              </div>
+            </div>
+            
+            <div class="dropdown-box-list" data-simplebar>
+              <div class="dropdown-box-list-item unread">
+                <div class="user-status notification">
+                  <a class="user-status-avatar" href="profile-timeline.html">
+                    <div class="user-avatar small no-outline">
+                      <div class="user-avatar-content">
+                        <div class="hexagon-image-30-32" data-src="assets/vecimarket/img/avatar/03.jpg"></div>
+                      </div>
+                      <div class="user-avatar-progress">
+                        <div class="hexagon-progress-40-44"></div>
+                      </div>
+                      <div class="user-avatar-progress-border">
+                        <div class="hexagon-border-40-44"></div>
+                      </div>
+                      <div class="user-avatar-badge">
+                        <div class="user-avatar-badge-border">
+                          <div class="hexagon-22-24"></div>
+                        </div>
+                        <div class="user-avatar-badge-content">
+                          <div class="hexagon-dark-16-18"></div>
+                        </div>
+                        <p class="user-avatar-badge-text">16</p>
+                      </div>
+                    </div>
+                  </a>
+                  <p class="user-status-title"><a class="bold" href="profile-timeline.html">Nick Grissom</a> posted a comment on your <a class="highlighted" href="profile-timeline.html">status update</a></p>
+                  <p class="user-status-timestamp">2 minutes ago</p>
+                  <div class="user-status-icon">
+                    <svg class="icon-comment">
+                      <use xlink:href="#svg-comment"></use>
+                    </svg>
+                  </div>
+                </div>
+              </div>
+        
+              <!-- DROPDOWN BOX LIST ITEM -->
+              <div class="dropdown-box-list-item">
+                <!-- USER STATUS -->
+                <div class="user-status notification">
+                  <!-- USER STATUS AVATAR -->
+                  <a class="user-status-avatar" href="profile-timeline.html">
+                    <!-- USER AVATAR -->
+                    <div class="user-avatar small no-outline">
+                      <!-- USER AVATAR CONTENT -->
+                      <div class="user-avatar-content">
+                        <!-- HEXAGON -->
+                        <div class="hexagon-image-30-32" data-src="assets/vecimarket/img/avatar/07.webp"></div>
+                        <!-- /HEXAGON -->
+                      </div>
+                      <!-- /USER AVATAR CONTENT -->
+                  
+                      <!-- USER AVATAR PROGRESS -->
+                      <div class="user-avatar-progress">
+                        <!-- HEXAGON -->
+                        <div class="hexagon-progress-40-44"></div>
+                        <!-- /HEXAGON -->
+                      </div>
+                      <!-- /USER AVATAR PROGRESS -->
+                  
+                      <!-- USER AVATAR PROGRESS BORDER -->
+                      <div class="user-avatar-progress-border">
+                        <!-- HEXAGON -->
+                        <div class="hexagon-border-40-44"></div>
+                        <!-- /HEXAGON -->
+                      </div>
+                      <!-- /USER AVATAR PROGRESS BORDER -->
+                  
+                      <!-- USER AVATAR BADGE -->
+                      <div class="user-avatar-badge">
+                        <!-- USER AVATAR BADGE BORDER -->
+                        <div class="user-avatar-badge-border">
+                          <!-- HEXAGON -->
+                          <div class="hexagon-22-24"></div>
+                          <!-- /HEXAGON -->
+                        </div>
+                        <!-- /USER AVATAR BADGE BORDER -->
+                  
+                        <!-- USER AVATAR BADGE CONTENT -->
+                        <div class="user-avatar-badge-content">
+                          <!-- HEXAGON -->
+                          <div class="hexagon-dark-16-18"></div>
+                          <!-- /HEXAGON -->
+                        </div>
+                        <!-- /USER AVATAR BADGE CONTENT -->
+                  
+                        <!-- USER AVATAR BADGE TEXT -->
+                        <p class="user-avatar-badge-text">26</p>
+                        <!-- /USER AVATAR BADGE TEXT -->
+                      </div>
+                      <!-- /USER AVATAR BADGE -->
+                    </div>
+                    <!-- /USER AVATAR -->
+                  </a>
+                  <!-- /USER STATUS AVATAR -->
+              
+                  <!-- USER STATUS TITLE -->
+                  <p class="user-status-title"><a class="bold" href="profile-timeline.html">Sarah Diamond</a> left a like <img class="reaction" src="assets/vecimarket/img/reaction/like.png" alt="reaction-like"> reaction on your <a class="highlighted" href="profile-timeline.html">status update</a></p>
+                  <!-- /USER STATUS TITLE -->
+              
+                  <!-- USER STATUS TIMESTAMP -->
+                  <p class="user-status-timestamp">17 minutes ago</p>
+                  <!-- /USER STATUS TIMESTAMP -->
+              
+                  <!-- USER STATUS ICON -->
+                  <div class="user-status-icon">
+                    <!-- ICON THUMBS UP -->
+                    <svg class="icon-thumbs-up">
+                      <use xlink:href="#svg-thumbs-up"></use>
+                    </svg>
+                    <!-- /ICON THUMBS UP -->
+                  </div>
+                  <!-- /USER STATUS ICON -->
+                </div>
+                <!-- /USER STATUS -->
+              </div>
+              <!-- /DROPDOWN BOX LIST ITEM -->
+        
+              <!-- DROPDOWN BOX LIST ITEM -->
+              <div class="dropdown-box-list-item">
+                <!-- USER STATUS -->
+                <div class="user-status notification">
+                  <!-- USER STATUS AVATAR -->
+                  <a class="user-status-avatar" href="profile-timeline.html">
+                    <!-- USER AVATAR -->
+                    <div class="user-avatar small no-outline">
+                      <!-- USER AVATAR CONTENT -->
+                      <div class="user-avatar-content">
+                        <!-- HEXAGON -->
+                        <div class="hexagon-image-30-32" data-src="assets/vecimarket/img/avatar/02.jpg"></div>
+                        <!-- /HEXAGON -->
+                      </div>
+                      <!-- /USER AVATAR CONTENT -->
+                  
+                      <!-- USER AVATAR PROGRESS -->
+                      <div class="user-avatar-progress">
+                        <!-- HEXAGON -->
+                        <div class="hexagon-progress-40-44"></div>
+                        <!-- /HEXAGON -->
+                      </div>
+                      <!-- /USER AVATAR PROGRESS -->
+                  
+                      <!-- USER AVATAR PROGRESS BORDER -->
+                      <div class="user-avatar-progress-border">
+                        <!-- HEXAGON -->
+                        <div class="hexagon-border-40-44"></div>
+                        <!-- /HEXAGON -->
+                      </div>
+                      <!-- /USER AVATAR PROGRESS BORDER -->
+                  
+                      <!-- USER AVATAR BADGE -->
+                      <div class="user-avatar-badge">
+                        <!-- USER AVATAR BADGE BORDER -->
+                        <div class="user-avatar-badge-border">
+                          <!-- HEXAGON -->
+                          <div class="hexagon-22-24"></div>
+                          <!-- /HEXAGON -->
+                        </div>
+                        <!-- /USER AVATAR BADGE BORDER -->
+                  
+                        <!-- USER AVATAR BADGE CONTENT -->
+                        <div class="user-avatar-badge-content">
+                          <!-- HEXAGON -->
+                          <div class="hexagon-dark-16-18"></div>
+                          <!-- /HEXAGON -->
+                        </div>
+                        <!-- /USER AVATAR BADGE CONTENT -->
+                  
+                        <!-- USER AVATAR BADGE TEXT -->
+                        <p class="user-avatar-badge-text">13</p>
+                        <!-- /USER AVATAR BADGE TEXT -->
+                      </div>
+                      <!-- /USER AVATAR BADGE -->
+                    </div>
+                    <!-- /USER AVATAR -->
+                  </a>
+                  <!-- /USER STATUS AVATAR -->
+        
+                  <!-- USER STATUS TITLE -->
+                  <p class="user-status-title"><a class="bold" href="profile-timeline.html">Destroy Dex</a> posted a comment on your <a class="highlighted" href="profile-photos.html">photo</a></p>
+                  <!-- /USER STATUS TITLE -->
+        
+                  <!-- USER STATUS TIMESTAMP -->
+                  <p class="user-status-timestamp">31 minutes ago</p>
+                  <!-- /USER STATUS TIMESTAMP -->
+        
+                  <!-- USER STATUS ICON -->
+                  <div class="user-status-icon">
+                    <!-- ICON COMMENT -->
+                    <svg class="icon-comment">
+                      <use xlink:href="#svg-comment"></use>
+                    </svg>
+                    <!-- /ICON COMMENT -->
+                  </div>
+                  <!-- /USER STATUS ICON -->
+                </div>
+                <!-- /USER STATUS -->
+              </div>
+              <!-- /DROPDOWN BOX LIST ITEM -->
+        
+              <!-- DROPDOWN BOX LIST ITEM -->
+              <div class="dropdown-box-list-item">
+                <!-- USER STATUS -->
+                <div class="user-status notification">
+                  <!-- USER STATUS AVATAR -->
+                  <a class="user-status-avatar" href="profile-timeline.html">
+                    <!-- USER AVATAR -->
+                    <div class="user-avatar small no-outline">
+                      <!-- USER AVATAR CONTENT -->
+                      <div class="user-avatar-content">
+                        <!-- HEXAGON -->
+                        <div class="hexagon-image-30-32" data-src="assets/vecimarket/img/avatar/10.jpg"></div>
+                        <!-- /HEXAGON -->
+                      </div>
+                      <!-- /USER AVATAR CONTENT -->
+                  
+                      <!-- USER AVATAR PROGRESS -->
+                      <div class="user-avatar-progress">
+                        <!-- HEXAGON -->
+                        <div class="hexagon-progress-40-44"></div>
+                        <!-- /HEXAGON -->
+                      </div>
+                      <!-- /USER AVATAR PROGRESS -->
+                  
+                      <!-- USER AVATAR PROGRESS BORDER -->
+                      <div class="user-avatar-progress-border">
+                        <!-- HEXAGON -->
+                        <div class="hexagon-border-40-44"></div>
+                        <!-- /HEXAGON -->
+                      </div>
+                      <!-- /USER AVATAR PROGRESS BORDER -->
+                  
+                      <!-- USER AVATAR BADGE -->
+                      <div class="user-avatar-badge">
+                        <!-- USER AVATAR BADGE BORDER -->
+                        <div class="user-avatar-badge-border">
+                          <!-- HEXAGON -->
+                          <div class="hexagon-22-24"></div>
+                          <!-- /HEXAGON -->
+                        </div>
+                        <!-- /USER AVATAR BADGE BORDER -->
+                  
+                        <!-- USER AVATAR BADGE CONTENT -->
+                        <div class="user-avatar-badge-content">
+                          <!-- HEXAGON -->
+                          <div class="hexagon-dark-16-18"></div>
+                          <!-- /HEXAGON -->
+                        </div>
+                        <!-- /USER AVATAR BADGE CONTENT -->
+                  
+                        <!-- USER AVATAR BADGE TEXT -->
+                        <p class="user-avatar-badge-text">5</p>
+                        <!-- /USER AVATAR BADGE TEXT -->
+                      </div>
+                      <!-- /USER AVATAR BADGE -->
+                    </div>
+                    <!-- /USER AVATAR -->
+                  </a>
+                  <!-- /USER STATUS AVATAR -->
+        
+                  <!-- USER STATUS TITLE -->
+                  <p class="user-status-title"><a class="bold" href="profile-timeline.html">The Green Goo</a> left a love <img class="reaction" src="assets/vecimarket/img/reaction/love.png" alt="reaction-love"> reaction on your <a class="highlighted" href="profile-timeline.html">status update</a></p>
+                  <!-- /USER STATUS TITLE -->
+        
+                  <!-- USER STATUS TIMESTAMP -->
+                  <p class="user-status-timestamp">2 hours ago</p>
+                  <!-- /USER STATUS TIMESTAMP -->
+        
+                  <!-- USER STATUS ICON -->
+                  <div class="user-status-icon">
+                    <!-- ICON THUMBS UP -->
+                    <svg class="icon-thumbs-up">
+                      <use xlink:href="#svg-thumbs-up"></use>
+                    </svg>
+                    <!-- /ICON THUMBS UP -->
+                  </div>
+                  <!-- /USER STATUS ICON -->
+                </div>
+                <!-- /USER STATUS -->
+              </div>
+              <!-- /DROPDOWN BOX LIST ITEM -->
+        
+              <!-- DROPDOWN BOX LIST ITEM -->
+              <div class="dropdown-box-list-item">
+                <!-- USER STATUS -->
+                <div class="user-status notification">
+                  <!-- USER STATUS AVATAR -->
+                  <a class="user-status-avatar" href="profile-timeline.html">
+                    <!-- USER AVATAR -->
+                    <div class="user-avatar small no-outline">
+                      <!-- USER AVATAR CONTENT -->
+                      <div class="user-avatar-content">
+                        <!-- HEXAGON -->
+                        <div class="hexagon-image-30-32" data-src="assets/vecimarket/img/avatar/05.jpg"></div>
+                        <!-- /HEXAGON -->
+                      </div>
+                      <!-- /USER AVATAR CONTENT -->
+                  
+                      <!-- USER AVATAR PROGRESS -->
+                      <div class="user-avatar-progress">
+                        <!-- HEXAGON -->
+                        <div class="hexagon-progress-40-44"></div>
+                        <!-- /HEXAGON -->
+                      </div>
+                      <!-- /USER AVATAR PROGRESS -->
+                  
+                      <!-- USER AVATAR PROGRESS BORDER -->
+                      <div class="user-avatar-progress-border">
+                        <!-- HEXAGON -->
+                        <div class="hexagon-border-40-44"></div>
+                        <!-- /HEXAGON -->
+                      </div>
+                      <!-- /USER AVATAR PROGRESS BORDER -->
+                  
+                      <!-- USER AVATAR BADGE -->
+                      <div class="user-avatar-badge">
+                        <!-- USER AVATAR BADGE BORDER -->
+                        <div class="user-avatar-badge-border">
+                          <!-- HEXAGON -->
+                          <div class="hexagon-22-24"></div>
+                          <!-- /HEXAGON -->
+                        </div>
+                        <!-- /USER AVATAR BADGE BORDER -->
+                  
+                        <!-- USER AVATAR BADGE CONTENT -->
+                        <div class="user-avatar-badge-content">
+                          <!-- HEXAGON -->
+                          <div class="hexagon-dark-16-18"></div>
+                          <!-- /HEXAGON -->
+                        </div>
+                        <!-- /USER AVATAR BADGE CONTENT -->
+                  
+                        <!-- USER AVATAR BADGE TEXT -->
+                        <p class="user-avatar-badge-text">12</p>
+                        <!-- /USER AVATAR BADGE TEXT -->
+                      </div>
+                      <!-- /USER AVATAR BADGE -->
+                    </div>
+                    <!-- /USER AVATAR -->
+                  </a>
+                  <!-- /USER STATUS AVATAR -->
+        
+                  <!-- USER STATUS TITLE -->
+                  <p class="user-status-title"><a class="bold" href="profile-timeline.html">Neko Bebop</a> posted a comment on your <a class="highlighted" href="profile-timeline.html">status update</a></p>
+                  <!-- /USER STATUS TITLE -->
+        
+                  <!-- USER STATUS TIMESTAMP -->
+                  <p class="user-status-timestamp">3 hours ago</p>
+                  <!-- /USER STATUS TIMESTAMP -->
+        
+                  <!-- USER STATUS ICON -->
+                  <div class="user-status-icon">
+                    <!-- ICON COMMENT -->
+                    <svg class="icon-comment">
+                      <use xlink:href="#svg-comment"></use>
+                    </svg>
+                    <!-- /ICON COMMENT -->
+                  </div>
+                  <!-- /USER STATUS ICON -->
+                </div>
+                <!-- /USER STATUS -->
+              </div>
+              <!-- /DROPDOWN BOX LIST ITEM -->
+            </div>
+          
+            <a class="dropdown-box-button secondary" href="hub-profile-notifications.html">View all Notifications</a>
+            
+          </div>
+       
+        </div>
+      
+      </div>
+      <!-- /ACTION LIST -->
+  
+      <!-- ACTION ITEM WRAP -->
+      <div class="action-item-wrap">
+        <!-- ACTION ITEM -->
+        <div class="action-item dark header-settings-dropdown-trigger">
+          <!-- ACTION ITEM ICON -->
+          <svg class="action-item-icon icon-settings">
+            <use xlink:href="#svg-settings"></use>
+          </svg>
+          <!-- /ACTION ITEM ICON -->
+        </div>
+        <!-- /ACTION ITEM -->
+      
+        <!-- DROPDOWN NAVIGATION -->
+        <div class="dropdown-navigation header-settings-dropdown">
+          <!-- DROPDOWN NAVIGATION HEADER -->
+          <div class="dropdown-navigation-header">
+            <!-- USER STATUS -->
+            <div class="user-status">
+              <!-- USER STATUS AVATAR -->
+              <a class="user-status-avatar" href="profile-timeline.html">
+                <!-- USER AVATAR -->
+                <div class="user-avatar small no-outline">
+                  <!-- USER AVATAR CONTENT -->
+                  <div class="user-avatar-content">
+                    <!-- HEXAGON -->
+                    <div class="hexagon-image-30-32" data-src="assets/vecimarket/img/avatar/01.jpg"></div>
+                    <!-- /HEXAGON -->
+                  </div>
+                  <!-- /USER AVATAR CONTENT -->
+      
+                  <!-- USER AVATAR PROGRESS -->
+                  <div class="user-avatar-progress">
+                    <!-- HEXAGON -->
+                    <div class="hexagon-progress-40-44"></div>
+                    <!-- /HEXAGON -->
+                  </div>
+                  <!-- /USER AVATAR PROGRESS -->
+      
+                  <!-- USER AVATAR PROGRESS BORDER -->
+                  <div class="user-avatar-progress-border">
+                    <!-- HEXAGON -->
+                    <div class="hexagon-border-40-44"></div>
+                    <!-- /HEXAGON -->
+                  </div>
+                  <!-- /USER AVATAR PROGRESS BORDER -->
+      
+                  <!-- USER AVATAR BADGE -->
+                  <div class="user-avatar-badge">
+                    <!-- USER AVATAR BADGE BORDER -->
+                    <div class="user-avatar-badge-border">
+                      <!-- HEXAGON -->
+                      <div class="hexagon-22-24"></div>
+                      <!-- /HEXAGON -->
+                    </div>
+                    <!-- /USER AVATAR BADGE BORDER -->
+      
+                    <!-- USER AVATAR BADGE CONTENT -->
+                    <div class="user-avatar-badge-content">
+                      <!-- HEXAGON -->
+                      <div class="hexagon-dark-16-18"></div>
+                      <!-- /HEXAGON -->
+                    </div>
+                    <!-- /USER AVATAR BADGE CONTENT -->
+      
+                    <!-- USER AVATAR BADGE TEXT -->
+                    <p class="user-avatar-badge-text">24</p>
+                    <!-- /USER AVATAR BADGE TEXT -->
+                  </div>
+                  <!-- /USER AVATAR BADGE -->
+                </div>
+                <!-- /USER AVATAR -->
+              </a>
+              <!-- /USER STATUS AVATAR -->
+      
+              <!-- USER STATUS TITLE -->
+              <p class="user-status-title"><span class="bold">Hi Marina!</span></p>
+              <!-- /USER STATUS TITLE -->
+      
+              <!-- USER STATUS TEXT -->
+              <p class="user-status-text small"><a href="profile-timeline.html">@marinavalentine</a></p>
+              <!-- /USER STATUS TEXT -->
+            </div>
+            <!-- /USER STATUS -->
+          </div>
+          <!-- /DROPDOWN NAVIGATION HEADER -->
+      
+        
+       <!-- DROPDOWN NAVIGATION CATEGORY -->
+       <p class="dropdown-navigation-category">Origin</p>
+       <!-- /DROPDOWN NAVIGATION CATEGORY -->
+   
+       <!-- DROPDOWN NAVIGATION LINK -->
+       <!-- <a class="dropdown-navigation-link" href="hub-store-account.html">default <span
+           class="highlighted" [hidden]="yeoman.config.clientSelected!=-1">seleccionada</span></a> -->
+       <!-- /DROPDOWN NAVIGATION LINK -->
+
+   
+       <!-- DROPDOWN NAVIGATION LINK -->
+       <a class="dropdown-navigation-link" style="cursor: pointer;"  *ngFor="let client of clients ; let i = index" (click)="setClient(i)" >{{client.name}}
+      
+        <span
+        class="highlighted" [hidden]="yeoman.config.clientSelected!=i">seleccionada</span></a>
+      
+       <!-- /DROPDOWN NAVIGATION LINK -->
+   
+      
+      
+        
+        </div>
+        <!-- /DROPDOWN NAVIGATION -->
+      </div>
+      <!-- /ACTION ITEM WRAP -->
+      </div>
+   
+  </header>
+
+  
+  

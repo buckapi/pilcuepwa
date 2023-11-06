@@ -1,0 +1,47 @@
+<ngx-ui-loader 
+  [pbColor]="'#0A60C2'"  
+  [bgsColor]="'#0A60C2'"
+  [fgsColor]="'#0A60C2'"
+  [text]="'Cargando...'"
+  [fgsSize]="15"
+  [fgsType]= "'cube-grid'"
+  [textColor]="'#0A60C2'"
+  [overlayColor]="' rgba(255,255,255,0.8)'">
+</ngx-ui-loader>
+<section class="shipping-details-sec" *ngIf="yeoman.existencias[0]!==undefined">
+    <div class="custom-container">
+      <ul class="address-list">
+        <li *ngFor="let existencia of yeoman.existencias;let i =index" [hidden]="(_butler.nameFiltering && (!existencia.arcodigo.toLowerCase().includes(_butler.searchTerm.toLowerCase())))">
+          <div class="shipping-address">
+            <div class="d-flex align-items-center justify-content-between">
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="flexRadioDefault" id="radio1" checked />
+                <label class="form-check-label" for="radio1">{{existencia.arcodigo}}</label>
+              </div>
+            </div>
+            <div class="address-details">
+              <p>{{existencia.arnombre}}</p>
+              <h5 class="content-number">Existencia  <span> {{existencia.arexistencia }}</span></h5>
+            </div>
+          </div>
+        </li>
+        <!-- <li>
+          <div class="shipping-address">
+            <div class="d-flex align-items-center justify-content-between">
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="flexRadioDefault" id="radio2" />
+                <label class="form-check-label" for="radio2">Office</label>
+              </div>
+            </div>
+            <div class="address-details">
+              <p>8502-8503 Preston Rd. Inglewood Street, Maine 98380</p>
+              <h5 class="content-number">Phone no. : <span> 12100 0023</span></h5>
+            </div>
+          </div>
+        </li> -->
+      </ul>
+      <div class="apply-btn">
+        <a href="profile.html" class="btn theme-btn w-100">apply</a>
+      </div>
+    </div>
+  </section>

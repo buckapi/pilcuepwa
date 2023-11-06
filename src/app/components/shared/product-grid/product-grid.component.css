@@ -1,0 +1,24 @@
+.pagination-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .pagination-controls {
+    flex: 1;
+  }
+  
+  .show-detail {
+    display: flex;
+    justify-content: flex-end;
+  }
+  
+  .show-detail-content {
+    white-space: nowrap;
+  }
+  
+  .custom-select {
+    max-width: 30%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }

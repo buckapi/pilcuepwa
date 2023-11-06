@@ -1,0 +1,252 @@
+  <!-- SECTION BANNER -->
+  <div class="section-banner">
+    <!-- SECTION BANNER ICON -->
+    <!-- <img class="section-banner-icon" src="assets/vecimarket/img/banner/marketplace-icon.png" alt="marketplace-icon"> -->
+    <img class="section-banner-icon" 
+     srcset="assets/vecimarket/img/banner/marketplace-icon.webp?type=image/webp 1x,
+             assets/vecimarket/img/banner/marketplace-icon.png?type=image/png 1x,
+             assets/vecimarket/img/banner/marketplace-icon.jpg?type=image/jpeg 1x" 
+     alt="marketplace-icon">
+    <!-- /SECTION BANNER ICON -->
+
+    <!-- SECTION BANNER TITLE -->
+    <p class="section-banner-title">Administrador de tienda</p>
+    <!-- /SECTION BANNER TITLE -->
+
+    <!-- SECTION BANNER TEXT -->
+    <p class="section-banner-text">Gestiona productos y pedidos en tu tienda online!</p>
+    <p class="section-banner-text"></p>
+    <!-- /SECTION BANNER TEXT -->
+    
+  </div>
+  <!-- /SECTION BANNER -->
+
+    <!-- SECTION HEADER -->
+    <div class="section-header">
+      <!-- SECTION HEADER INFO -->
+      <div class="section-header-info">
+        <!-- SECTION PRETITLE -->
+        <p class="section-pretitle">Select client's dataBase</p>
+        <!-- /SECTION PRETITLE -->
+  
+        <!-- SECTION TITLE -->
+        <h2 class="section-title">Conection</h2>
+        <!-- /SECTION TITLE -->
+      </div>
+      <!-- /SECTION HEADER INFO -->
+    </div>
+    <!-- /SECTION HEADER -->
+
+ 
+    <div class="grid grid-9 stretched">
+      <!-- GRID COLUMN -->
+      <div class="grid-column">
+        <!-- WIDGET BOX -->
+        <div class="widget-box">
+          <!-- WIDGET BOX TITLE -->
+          <p class="widget-box-title">Conections availables</p>
+          <!-- /WIDGET BOX TITLE -->
+      
+          <!-- WIDGET BOX CONTENT -->
+          <div class="widget-box-content no-margin-top">
+            <!-- TABLE -->
+            <div class="table table-top-friends join-rows">
+              <!-- TABLE HEADER -->
+              <div class="table-header">
+                <!-- TABLE HEADER COLUMN -->
+                <div class="table-header-column">
+                  <!-- TABLE HEADER TITLE -->
+                  <p class="table-header-title">Client</p>
+                  <!-- /TABLE HEADER TITLE -->
+                </div>
+                <!-- /TABLE HEADER COLUMN -->
+          
+                <!-- TABLE HEADER COLUMN -->
+                <div class="table-header-column centered padded">
+                  <!-- TABLE HEADER TITLE -->
+                  <p class="table-header-title">Port</p>
+                  <!-- /TABLE HEADER TITLE -->
+                </div>
+                <!-- /TABLE HEADER COLUMN -->
+          
+                <!-- TABLE HEADER COLUMN -->
+                <div class="table-header-column centered padded">
+                  <!-- TABLE HEADER TITLE -->
+                  <p class="table-header-title">Comments</p>
+                  <!-- /TABLE HEADER TITLE -->
+                </div>
+                <!-- /TABLE HEADER COLUMN -->
+          
+                <!-- TABLE HEADER COLUMN -->
+                <div class="table-header-column centered padded">
+                  <!-- TABLE HEADER TITLE -->
+                  <p class="table-header-title">Shares</p>
+                  <!-- /TABLE HEADER TITLE -->
+                </div>
+                <!-- /TABLE HEADER COLUMN -->
+          
+                <!-- TABLE HEADER COLUMN -->
+                <div class="table-header-column centered padded">
+                  <!-- TABLE HEADER TITLE -->
+                  <p class="table-header-title">Replies</p>
+                  <!-- /TABLE HEADER TITLE -->
+                </div>
+                <!-- /TABLE HEADER COLUMN -->
+          
+                <!-- TABLE HEADER COLUMN -->
+                <div class="table-header-column padded-left">
+                  <!-- TABLE HEADER TITLE -->
+                  <p class="table-header-title">Post Engagement</p>
+                  <!-- /TABLE HEADER TITLE -->
+                </div>
+                <!-- /TABLE HEADER COLUMN -->
+              </div>
+              <!-- /TABLE HEADER -->
+          
+              <!-- TABLE BODY -->
+              <div class="table-body">
+                <!-- TABLE ROW -->
+                <div class="table-row tiny" *ngFor="let client of clients">
+                  <!-- TABLE COLUMN -->
+                  <div class="table-column">
+                    <!-- USER STATUS -->
+                    <div class="user-status">
+                      <!-- USER STATUS AVATAR -->
+                      <a class="user-status-avatar" href="profile-timeline.html">
+                        <!-- USER AVATAR -->
+                        <div class="user-avatar small no-outline">
+                          <!-- USER AVATAR CONTENT -->
+                          <div class="user-avatar-content">
+                            <!-- HEXAGON -->
+                            <div class="hexagon-image-30-32" data-src="assets/vecimarket/img/avatar/03.jpg"></div>
+                            <!-- /HEXAGON -->
+                          </div>
+                          <!-- /USER AVATAR CONTENT -->
+                      
+                          <!-- USER AVATAR PROGRESS -->
+                          <div class="user-avatar-progress">
+                            <!-- HEXAGON -->
+                            <div class="hexagon-progress-40-44"></div>
+                            <!-- /HEXAGON -->
+                          </div>
+                          <!-- /USER AVATAR PROGRESS -->
+                      
+                          <!-- USER AVATAR PROGRESS BORDER -->
+                          <div class="user-avatar-progress-border">
+                            <!-- HEXAGON -->
+                            <div class="hexagon-border-40-44"></div>
+                            <!-- /HEXAGON -->
+                          </div>
+                          <!-- /USER AVATAR PROGRESS BORDER -->
+                      
+                          <!-- USER AVATAR BADGE -->
+                          <div class="user-avatar-badge">
+                            <!-- USER AVATAR BADGE BORDER -->
+                            <div class="user-avatar-badge-border">
+                              <!-- HEXAGON -->
+                              <div class="hexagon-22-24"></div>
+                              <!-- /HEXAGON -->
+                            </div>
+                            <!-- /USER AVATAR BADGE BORDER -->
+                      
+                            <!-- USER AVATAR BADGE CONTENT -->
+                            <div class="user-avatar-badge-content">
+                              <!-- HEXAGON -->
+                              <div class="hexagon-dark-16-18"></div>
+                              <!-- /HEXAGON -->
+                            </div>
+                            <!-- /USER AVATAR BADGE CONTENT -->
+                      
+                            <!-- USER AVATAR BADGE TEXT -->
+                            <p class="user-avatar-badge-text">16</p>
+                            <!-- /USER AVATAR BADGE TEXT -->
+                          </div>
+                          <!-- /USER AVATAR BADGE -->
+                        </div>
+                        <!-- /USER AVATAR -->
+                      </a>
+                      <!-- /USER STATUS AVATAR -->
+                  
+                      <!-- USER STATUS TITLE -->
+                      <p class="user-status-title"><a class="bold" href="profile-timeline.html">{{client.name}}</a></p>
+                      <!-- /USER STATUS TITLE -->
+                  
+                      <!-- USER STATUS TEXT -->
+                      <p class="user-status-text small" appTrimEnd>{{client.RestUrl}}</p>
+                      <!-- /USER STATUS TEXT -->
+                    </div>
+                    <!-- /USER STATUS -->
+                  </div>
+                  <!-- /TABLE COLUMN -->
+          
+                  <!-- TABLE COLUMN -->
+                  <div class="table-column centered padded">
+                    <!-- TABLE TITLE -->
+                    <p class="table-title " appTrimLast>{{client.RestUrl}}</p>
+                    <!-- /TABLE TITLE -->
+                  </div>
+                  <!-- /TABLE COLUMN -->
+          
+                  <!-- TABLE COLUMN -->
+                  <div class="table-column centered padded">
+                    <!-- TABLE TITLE -->
+                    <p class="table-title">750</p>
+                    <!-- /TABLE TITLE -->
+                  </div>
+                  <!-- /TABLE COLUMN -->
+          
+                  <!-- TABLE COLUMN -->
+                  <div class="table-column centered padded">
+                    <!-- TABLE TITLE -->
+                    <p class="table-title">109</p>
+                    <!-- /TABLE TITLE -->
+                  </div>
+                  <!-- /TABLE COLUMN -->
+          
+                  <!-- TABLE COLUMN -->
+                  <div class="table-column centered padded">
+                    <!-- TABLE TITLE -->
+                    <p class="table-title">223</p>
+                    <!-- /TABLE TITLE -->
+                  </div>
+                  <!-- /TABLE COLUMN -->
+          
+                  <!-- TABLE COLUMN -->
+                  <div class="table-column padded-left">
+                    <!-- PROGRESS STAT WRAP -->
+                    <div class="progress-stat-wrap">
+                      <!-- PROGRESS STAT -->
+                      <div class="progress-stat">
+                        <!-- PROGRESS STAT BAR -->
+                        <div id="post-engagement-1" class="progress-stat-bar"></div>
+                        <!-- /PROGRESS STAT BAR -->
+                  
+                        <!-- BAR PROGRESS WRAP -->
+                        <div class="bar-progress-wrap">
+                          <!-- BAR PROGRESS INFO -->
+                          <p class="bar-progress-info medium negative"><span class="bar-progress-text no-space"></span></p>
+                          <!-- /BAR PROGRESS INFO -->
+                        </div>
+                        <!-- /BAR PROGRESS WRAP -->
+                      </div>
+                      <!-- /PROGRESS STAT -->
+                    </div>
+                    <!-- /PROGRESS STAT WRAP -->
+                  </div>
+                  <!-- /TABLE COLUMN -->
+                </div>
+                <!-- /TABLE ROW -->
+          
+           
+              </div>
+              <!-- /TABLE BODY -->
+            </div>
+            <!-- /TABLE -->
+          </div>
+          <!-- WIDGET BOX CONTENT -->
+        </div>
+        <!-- /WIDGET BOX -->
+      </div>
+      <!-- /GRID COLUMN -->
+    
+    </div>

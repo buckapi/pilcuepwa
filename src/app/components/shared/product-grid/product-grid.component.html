@@ -1,0 +1,144 @@
+<div class="section-header">
+  <div class="section-header-info">
+    <p class="section-pretitle">Inventario de productos!</p>
+    <h2 class="section-title">Productos</h2>
+  </div>
+  </div>
+   <!-- SECTION FILTERS BAR -->
+   <div class="section-filters-bar v6">
+    <!-- SECTION FILTERS BAR ACTIONS -->
+    <div class="section-filters-bar-actions">
+      <!-- FORM -->
+      <form class="form">
+        <!-- FORM ITEM -->
+        <div class="form-item split">
+          <!-- FORM INPUT -->
+          <div class="form-input small">
+            <label for="events-search">Filtrar x nombre</label>
+            <input type="text" id="events-search" name="events_search">
+          </div>
+          <!-- /FORM INPUT -->
+        </div>
+        <!-- /FORM ITEM -->
+        
+      </form>
+      <!-- /FORM -->
+      
+    </div>
+    <!-- /SECTION FILTERS BAR ACTIONS -->
+
+    <!-- SECTION FILTERS BAR ACTIONS -->
+    <div class="section-filters-bar-actions">
+      <div class="pagination-container">
+        <div class="pagination-controls">
+          <pagination-controls previousLabel="Atrás" nextLabel="Siguiente" (pageChange)="p = $event" [hidden]="showDetail"></pagination-controls>
+        </div>
+      </div>
+    </div>
+    <div class="section-filters-bar-actions">
+      <!-- BUTTON -->
+      <div class="show-detail">
+        <span [hidden]="showDetail" class="show-detail-content">
+          Mostrar:
+          <select #selectElement [(ngModel)]="itemsPP" (change)="changeItemsPerPage(itemsPP)" [hidden]="showDetail" class="custom-select">
+            <option>{{itemsPP}}</option>
+            <option *ngFor="let option of options" [value]="option" [selected]="option === itemsPP">{{ option }}</option>
+          </select>
+          productos
+        </span>
+      </div>
+      </div>
+      <div class="section-filters-bar-actions">
+        <p class="button secondary popup-event-creation-trigger">+ Nuevo producto</p>
+        <p class="button secondary" (click)="open()">+  producto</p>
+      <!-- /BUTTON -->
+    </div>
+    <!-- /SECTION FILTERS BAR ACTIONS -->
+  </div>
+  <!-- /SECTION FILTERS BAR -->
+  
+    
+  <div class="section-header">
+   
+    <div class="section-header-actions">
+      
+      
+      <!-- <a class="section-header-action" href="marketplace-category.html">Ver todos</a> -->
+  
+    </div>
+  </div>
+  <div class="grid grid-3-3-3-3 centered">
+    <div class="product-preview"  *ngFor='let product of yeoman.products | paginate: { itemsPerPage: itemsPP, currentPage: p }; let i = index' > 
+      <a href="marketplace-product.html">
+        <figure class="product-preview-image liquid">
+          <img 
+          src="{{product.images[0]}}"
+          >
+        </figure>
+      </a>
+      <div class="product-preview-info" >
+        <p class="text-sticker"><span class="highlighted">$</span>{{product.price}}</p>
+        <p class="product-preview-title"><a href="marketplace-product.html">{{product.name}}</a></p>
+        <!-- <p class="product-preview-category digital"><a href="marketplace-category.html">{{product.categoria}}</a></p> -->
+        <p class="product-preview-text">{{product.description | slice:0:50}} ...</p>
+      </div>
+      <div class="product-preview-meta" >
+        <div class="product-preview-author">
+          <a class="product-preview-author-image user-avatar micro no-border" href="profile-timeline.html">
+            <div class="user-avatar-content">
+              <div class="hexagon-image-18-20" data-src="assets/vecimarket/img/avatar/01.jpg"></div>
+            </div>
+          </a>
+  
+          <!-- <p class="product-preview-author-title">Posted By</p>
+  
+          <p class="product-preview-author-text"><a href="profile-timeline.html">Marina Valentine</a></p>
+   -->
+        </div>
+  
+        <div class="rating-list">
+ 
+          <div class="rating filled">
+           
+            <svg class="rating-icon icon-star">
+              <use xlink:href="#svg-star"></use>
+            </svg>
+  
+          </div>
+
+  
+          <div class="rating filled">
+     
+            <svg class="rating-icon icon-star">
+              <use xlink:href="#svg-star"></use>
+            </svg>
+          
+          </div>
+        
+          <div class="rating filled">
+      
+            <svg class="rating-icon icon-star">
+              <use xlink:href="#svg-star"></use>
+            </svg>
+    
+          </div>
+ 
+  
+          <div class="rating filled">
+    
+            <svg class="rating-icon icon-star">
+              <use xlink:href="#svg-star"></use>
+            </svg>
+         
+          </div>
+          <div class="rating">
+            <svg class="rating-icon icon-star">
+              <use xlink:href="#svg-star"></use>
+            </svg>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+  

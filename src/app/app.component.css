@@ -1,0 +1,14 @@
+.popup-close-button-icon {
+    /* Anula las reglas de estilo visual */
+    /* Por ejemplo:
+    display: none;
+    */
+  }
+  .app-menubar {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #ffffff; /* Cambia esto al color de fondo deseado */
+    /* Otros estilos como altura, relleno, etc. según tus necesidades */
+  }

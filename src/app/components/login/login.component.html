@@ -1,0 +1,54 @@
+<ngx-ui-loader [pbColor]="'#0A60C2'"  [bgsColor]="'#0A60C2'"[fgsColor]="'#0A60C2'"[text]="'Validando ingreso, por favor espere...'"
+[fgsSize]="15"[fgsType]= "'cube-grid'"[textColor]="'#0A60C2'"[overlayColor]="' rgba(255,255,255,0.8)'" 
+
+
+></ngx-ui-loader>   
+<div>
+  <img class="img-fluid auth-bg" src="assets/fuzzy/images/background/imagen.png" alt="auth_bg" style="margin-left: auto; margin-right: auto;" />
+</div>
+  
+
+
+    <div id="appCapsule">
+
+      <!-- <div class="section mt-2 text-center">
+          <h1>Iniciar session</h1>
+          <h4></h4>
+      </div> -->
+      <div class="section mb-5 p-2">
+          <form class="auth-form" [formGroup]="ngFormLogin" (ngSubmit)="onLogin()">
+              <div class="custom-container">
+                  <div class="mb-3">
+                      <label for="email" class="form-label">Email</label>
+                      <input type="email" class="form-control" id="email" placeholder="Email" formControlName="email" required [ngClass]="{ 'is-invalid': submitted && f['email'].errors }">
+                    
+                      <div *ngIf="submitted && f['email'].errors" class="invalid-feedback">
+                        <div *ngIf="f['email'].errors['required']">El email requerido
+                        </div>
+                      </div>
+                    </div>
+                    <div class="mb-3">
+                      <label for="password" class="form-label">Contraseña</label>
+                      <input type="password" class="form-control" id="password" placeholder="*******" formControlName="password" required [ngClass]="{ 'is-invalid': submitted && f['password'].errors}">
+                      <div *ngIf="submitted && f['password'].errors" class="invalid-feedback">
+                        <div *ngIf="f['password'].errors['required']">Contraseña requerida
+                      </div>
+                    </div>
+                <div class="option mt-3">
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" />
+                  </div>
+                </div>
+          
+                <div [hidden]="!isError">
+                  <span style="color:red;">{{message}}</span> 
+                </div>
+                <div class="d-grid gap-2">
+                  <button type="submit" class="btn btn-primary" style="border-radius: 10px;">Entrar</button>
+                </div>
+              </div>
+              </div>
+            </form>
+      </div>
+
+  </div>

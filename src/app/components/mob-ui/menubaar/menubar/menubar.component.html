@@ -1,0 +1,20 @@
+<div class="menubar-area style-4 mt-4" [hidden]="router.url.includes('mobAddOrder') || router.url.includes('mobPreOrder') || router.url.includes('mobOrderDetail')">
+    <div class="toolbar-inner menubar-nav">
+        <a href="javascript:void(0);" class="nav-link" [class.text-primary]="router.url.includes('mobOrders')"
+            routerLink="mobOrders">
+            <i class="fa-solid fa-history"></i>
+        </a>
+        <a class="nav-link add-post"   [hidden]="yeoman.type!=='client'">
+            <i class="fa-solid fa-plus" (click)="goAddOrder()" [hidden]="(!states.addButton && states.loadingButton) " ></i>
+            <img src="assets/meat/images/loading.gif" width="50" [hidden]="(states.addButton && !states.loadingButton) || (!states.addButton && !states.loadingButton )|| (states.addButton&&states.loadingButton)">
+        </a>
+        <a href="javascript:void(0);" class="nav-link " [class.active]="router.url.includes('mobHome')"
+            routerLink="mobHome">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="21" fill="#b5b5b5">
+                <path
+                    d="M8 7.75a3.75 3.75 0 1 0 0-7.5 3.75 3.75 0 1 0 0 7.5zm7.5 9v1.5c-.002.199-.079.39-.217.532C13.61 20.455 8.57 20.5 8 20.5s-5.61-.045-7.282-1.718C.579 18.64.501 18.449.5 18.25v-1.5a7.5 7.5 0 1 1 15 0z">
+                </path>
+            </svg>
+        </a>
+    </div>
+</div>

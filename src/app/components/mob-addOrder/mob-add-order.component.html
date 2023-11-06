@@ -1,0 +1,200 @@
+
+<header class="header style-4 bg-img header-fixed">
+    <div class="container" bis_skin_checked="1">
+        <div class="header-content" bis_skin_checked="1">
+            <!-- <div class="left-content">
+                <a href="javascript:void(0);" class="back-btn">
+                    <i class="fa-solid fa-arrow-left" style="color: white;"></i>
+                </a>|
+            </div> -->
+            <div class="left-content">
+                <a  class="back-btn" (click)="setLoading()">
+                    <i class="fa-solid fa-house" style="color: white;"></i>
+                </a>
+            </div>
+            <div class="location" bis_skin_checked="1" style="padding-left: 5%;">
+
+                <div class="location-content" bis_skin_checked="1">
+                    <div class="d-flex align-items-center" bis_skin_checked="1">
+                        <h5 class="title me-2">Nueva orden de compra</h5>
+                    </div>
+                    <p>
+                        click2Order, Distribuidor : {{yeoman.distName}}
+                    </p>
+                </div>
+                <a href="javascript:void(0);" class="menu-toggler icon-box-2">
+
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 297.001 297.001">
+                        <path
+                            d="M107.883 0h-85.27C10.144 0 .001 10.143.001 22.612v85.27c0 12.469 10.143 22.612 22.612 22.612h85.27c12.469 0 22.612-10.143 22.612-22.612v-85.27C130.493 10.143 120.352 0 107.883 0zm166.505 0h-85.27c-12.469 0-22.612 10.143-22.612 22.612v85.27c0 12.469 10.143 22.612 22.612 22.612h85.27c12.469 0 22.612-10.143 22.612-22.612v-85.27C297 10.143 286.857 0 274.388 0zM107.883 166.507h-85.27c-12.469 0-22.612 10.142-22.612 22.611v85.27C.001 286.857 10.144 297 22.613 297h85.27c12.469 0 22.612-10.143 22.612-22.612v-85.27c-.002-12.469-10.143-22.611-22.612-22.611zm166.505 0h-85.27c-12.469 0-22.612 10.143-22.612 22.612v85.27c0 12.469 10.143 22.612 22.612 22.612h85.27C286.857 297 297 286.857 297 274.388v-85.27c0-12.469-10.143-22.611-22.612-22.611z">
+                        </path>
+                    </svg> </a>
+            </div>
+        </div>
+        <div class="search-box style-1" bis_skin_checked="1">
+            <div class="input-group input-radius" bis_skin_checked="1">
+                <span class="input-group-text">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M10.9395 1.9313C5.98074 1.9313 1.94141 5.97063 1.94141 10.9294C1.94141 15.8881 5.98074 19.9353 10.9395 19.9353C13.0575 19.9353 15.0054 19.193 16.5449 17.9606L20.293 21.7067C20.4821 21.888 20.7347 21.988 20.9967 21.9854C21.2587 21.9827 21.5093 21.8775 21.6947 21.6924C21.8801 21.5073 21.9856 21.2569 21.9886 20.9949C21.9917 20.7329 21.892 20.4802 21.7109 20.2908L17.9629 16.5427C19.1963 15.0008 19.9395 13.0498 19.9395 10.9294C19.9395 5.97063 15.8982 1.9313 10.9395 1.9313ZM10.9395 3.93134C14.8173 3.93134 17.9375 7.05153 17.9375 10.9294C17.9375 14.8072 14.8173 17.9352 10.9395 17.9352C7.06162 17.9352 3.94141 14.8072 3.94141 10.9294C3.94141 7.05153 7.06162 3.93134 10.9395 3.93134Z"
+                            fill="#7D8FAB"></path>
+                    </svg>
+                </span>
+                <input type="text" placeholder="Type product name to search" class="form-control main-in ps-0 bs-0">
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- Page Content -->
+<div class="page-content" style="padding-top: 122px;">
+    <div class="container bottom-content">
+        <div class="row catagore-bx g-4">
+            <div class="col-6 " *ngFor="let articulo  of yeoman.catalogo ;let i =index"
+                style="cursor: pointer;" (click)="select(articulo,i)">
+                <div class="card" >
+                    <div class="card-item style-3" style="border: none;">
+                        <div class="media-wrapper">
+                            <a class="dz-media">
+                                <div class="dz-media media-70">
+                                    <img src="assets/meat/images/not.jpg" alt="image">
+                                </div>
+                            </a>
+                        </div>
+                        <div class="content-wrapper" >
+                            <div class="dz-content" style="padding-left: 20px;">
+                                <span>
+                                    <span style="font-weight: bold; font-size: 14px;">
+                                        {{ articulo.arnombre | slice:0:25 }}...
+                                    </span>
+                                    <span [hidden]="articulo.descuentoPromocional === undefined">
+                                        <span style="font-weight: bold; font-size: 20px;">
+        
+                                            <!-- Descuento -->
+                                        </span>
+                                        <img src="assets/meat/images/discount.png"
+                                            [hidden]="articulo.descuentoPromocional === undefined" width="25">
+                                    </span>
+                                    <br/>
+                                    <span style="font-weight: bold; font-size: 20px;">
+                                        precio
+                                    </span>
+                                    <span
+                                        [hidden]="articulo.precioConDescuento!==undefined && articulo.precioConDescuento !== articulo.arprecio">
+                                        {{articulo.arprecio | number:'1.2-2'}}</span>
+                                    <span
+                                        *ngIf="articulo.precioConDescuento !== undefined && articulo.precioConDescuento !== articulo.arprecio"
+                                        [ngClass]="{'precio-tachado': true}">
+                                        {{articulo.arprecio | number:'1.2-2'}}
+                                    </span>
+                                    <span
+                                        *ngIf="articulo.precioConDescuento !== undefined && articulo.precioConDescuento !== articulo.arprecio"
+                                        [ngClass]="{'precio-diferente': true}">
+                                        {{articulo.precioConDescuento | number:'1.2-2'}}
+                                    </span>
+                                     
+                                    <br />
+                                    <span>
+                                        <span style="font-weight: bold; font-size: 20px;">
+                                            iva
+                                        </span>
+                                        {{ articulo.ariva }} %
+                                    </span>
+                                       
+                                    <br />
+                                    <span *ngIf="articulo.ardescuento > 0" style="font-weight: bold; font-size: 20px;" >Dcto: 
+                                    <span style="color: #06b89d; font-size: 16px; font-weight: 500;">
+                                        {{articulo.ardescuento }} 
+                                    
+                                    </span>
+                                <span style="font-size: 16px; font-weight: 300;">%</span>
+                                    
+                                </span>
+                                    
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="card-item style-3" style="border: none;  margin: 0px 13px 13px 13px;" >
+                    
+                        <div class="dz-content ">
+                            <!-- <span class="product-title">Combo pack</span> -->
+                         
+
+                            <div class="offer-code text-center">
+                                <table class="table  table-striped-sm"
+                                [hidden]="articulo.descuentoPromocional === undefined || showISelecte!==i"
+                                *ngIf="articulo.descuentoPromocional!==undefined && articulo.descuentoPorcentaje !==undefined">
+                                <thead>
+                                    <tr>
+                                        <th>Cantidad</th>
+                                        <th>% dcto.</th>
+                                    </tr>
+                                </thead>
+                                <ng-container *ngFor="let row of articulo.descuentoPromocional; let i = index">
+                                    <tr [hidden]="articulo.descuentoPromocional[i] === 0">
+                                        <td [hidden]="i==2 || articulo.descuentoPromocional[i] === 0 || articulo.descuentoPromocional[i+1] === 0"
+                                            [ngClass]="{ 'text-green-mod ': i === articulo.descuentoIndex }">
+                                            de {{ row }} a {{ articulo.descuentoPromocional[i+1] }} und. 
+                                        </td>
+                                        <td [hidden]="i==2 || articulo.descuentoPromocional[i] === 0 || articulo.descuentoPromocional[i+1] !== 0"
+                                            [ngClass]="{ 'text-green-mod ': i === articulo.descuentoIndex }">
+                                            de {{ row }} und. 
+                                        </td>
+                                        <td [hidden]="i<2 || articulo.descuentoPromocional[i] === 0"
+                                            [ngClass]="{ 'text-green-mod ': i === articulo.descuentoIndex }">
+                                            mas de {{ row }} und. {{
+                                            articulo.descuentoPromocional[i+1] }}
+                                        </td>
+                                        <td [ngClass]="{ 'text-green-mod ': i === articulo.descuentoIndex }" style="padding-left: 20px;">
+                                            {{ articulo.descuentoPorcentaje[i] }} %
+                                        </td>
+                                    </tr>
+                                </ng-container>
+                            </table>
+                               
+                                <br />
+                                <form (ngSubmit)="agregarAOrden(articulo,i)"  class="text-center" >
+                                    <span>Cantidad:</span>
+                                    <input type="number" [(ngModel)]="articulo.cantidad" name="cantidad" min="0" class="col-6"
+                                        step="1" required class="form-control " (input)="onInputChange(articulo,i)"
+                                        [ngStyle]="{'background-color': isCantidadUndefinedInCatalogo(i) ? '#b1dbff56' : '#d1ffd1'}"
+                                        (keyup.enter)="focusNextInput(articulo, i)" #cantidadInput="ngModel"
+                                        style="font-size: 1rem; color: #0a60c2;">
+                                    <!-- {{articulo.cantidad}} -->
+                                </form>
+                                <br />
+
+                              
+                            </div>
+                            <!-- <div class="footer-wrapper">
+                                        <div class="price-wrapper">
+                                            <h6 class="current-price"><i class="fa-solid fa-indian-rupee-sign"></i>830</h6>
+                                            
+                                        </div>
+                                        <a href="product-detail.html" class="btn btn-sm btn-outline-primary">ADD</a>
+                                    </div> -->
+                                 
+                        </div>
+                    </div>
+                   
+
+
+
+                   
+                    
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div (scroll)="onScroll()">
+    <!-- Tu lista de elementos -->
+</div>
+<footer class="footer fixed">
+    <div class="container">
+        <a class="btn mb-3 btn-primary w-100" style="box-shadow: '0 4px 20px -8px var(--primary)';" (click)="goPre()" >Procesar</a>
+    </div>
+</footer>

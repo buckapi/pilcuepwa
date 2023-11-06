@@ -1,0 +1,50 @@
+
+<!-- search section starts -->
+<section [hidden]="router.url.includes('apidocs')">
+    <div class="custom-container">
+      <form class="theme-form search-head" target="_blank">
+        <div class="form-group">
+          <div class="form-input">
+            <input type="text" class="form-control search" id="inputusername" placeholder="Buscar producto." />
+            <i class="iconsax search-icon" data-icon="search-normal-2"></i>
+          </div>
+  
+          <!-- <a href="landing.html#search-filter" class="btn filter-btn mt-0" data-bs-toggle="modal"> -->
+          <a class="btn filter-btn mt-0" data-bs-toggle="modal">
+            <!-- <i class="iconsax filter-icon" data-icon="media-sliders-3"></i> -->
+  
+  
+            <!-- <img class="active" src="assets/fuzzy/images/svg/categories-fill.svg" alt="categories" /> -->
+            <img class="active" src="assets/fuzzy/images/svg/grid-fill.svg" alt="home"[hidden]="yeoman.view=='list'"/>
+
+            <img class="unactive" src="assets/fuzzy/images/svg/gridd.svg" alt="home"[hidden]="yeoman.view=='grid'"(click)="set('grid')" />
+            <img class="active" src="assets/fuzzy/images/svg/list.svg" alt="home"  [hidden]="yeoman.view=='grid'" />
+
+            <img class="unactive" src="assets/fuzzy/images/svg/list-fill.svg" alt="home"  [hidden]="yeoman.view=='list'"(click)="set('list')" />
+            
+          </a>
+        </div>
+      </form>
+    </div>
+  </section>
+  <!-- search section end -->
+
+<!-- search section starts -->
+<section [hidden]="!router.url.includes('apidocs')">
+  <div class="custom-container">
+    <form class="theme-form search-head" target="_blank">
+      <div class="form-group">
+        <div class="form-input">
+          <input type="text" class="form-control" [(ngModel)]="_butler.searchTerm" placeholder="CODIGO..."   (keyup)="onSearch2()"  [ngModelOptions]="{ standalone: true }">
+          
+          <!-- <input type="text" class="form-control search" id="inputusername" placeholder="Buscar por codigo..." /> -->
+          <i class="iconsax search-icon" data-icon="search-normal-2"></i>
+        </div>
+
+        <!-- <a href="landing.html#search-filter" class="btn filter-btn mt-0" data-bs-toggle="modal"> -->
+     
+      </div>
+    </form>
+  </div>
+</section>
+<!-- search section end -->

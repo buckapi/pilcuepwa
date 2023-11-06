@@ -1,0 +1,30 @@
+  <!-- bottom navbar start -->
+  <div class="navbar-menu" [hidden]="router.url.includes('c2oOrders')|| router.url.includes('login')|| router.url.includes('detail')">
+    <ul>
+      <li [ngClass]="{ 'active': router.url.includes('home') }">
+        <a routerLink="home">
+          <div class="icon">
+            <img class="unactive" src="assets/fuzzy/images/svg/home.svg" alt="home" />
+            <img class="active" src="assets/fuzzy/images/svg/home-fill.svg" alt="home" />
+          </div>
+        </a>
+      </li>
+      <li [ngClass]="{ 'active': router.url.includes('c2oAll') }">
+        <a routerLink="c2oAll">
+          <div class="icon">
+            <img class="unactive" src="assets/fuzzy/images/svg/categories.svg" alt="categories" />
+            <img class="active" src="assets/fuzzy/images/svg/categories-fill.svg" alt="categories" />
+          </div>
+        </a>
+      </li>
+      <li [ngClass]="{ 'active': router.url.includes('apidocs') }" [hidden]="!yeoman.apiConnected">
+        <a routerLink="apidocs">
+          <div class="icon">
+            <img class="unactive" src="assets/fuzzy/images/svg/bag.svg" alt="bag" />
+            <img class="active" src="assets/fuzzy/images/svg/bag-fill.svg" alt="bag" />
+          </div>
+        </a>
+      </li>
+   
+    </ul>
+  </div>

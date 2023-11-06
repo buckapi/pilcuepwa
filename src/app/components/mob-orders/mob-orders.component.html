@@ -1,0 +1,100 @@
+<header class="header style-2">
+	<div class="main-bar">
+		<div class="container">
+			<div class="header-content">
+				<div class="mid-content mt-2">
+					<h4>Ordenes</h4>
+					<div class="container mt-2 mb-2">
+						<div class="row g-2">
+							<div class="col-4">
+								<button type="button" class="btn btn-outline-primary w-100" (click)="setViewer('new')"
+									[ngClass]="{'active': yeoman.viewer == 'new'}"
+									[ngStyle]="{'box-shadow': yeoman.viewer !== 'new' ? '0 4px 20px -8px var(--primary)' : ''}">
+									Nuevas ({{yeoman.ordersNew.length}})
+								</button>
+							</div>
+							<div class="col-4">
+								<button type="button" class="btn btn-outline-primary w-100"
+									(click)="setViewer('processing')"
+									[ngClass]="{'active': yeoman.viewer == 'processing'}"
+									[ngStyle]="{'box-shadow': yeoman.viewer !== 'processing' ? '0 4px 20px -8px var(--primary)' : ''}">
+									Procesando ({{yeoman.ordersProcessing.length}})
+								</button>
+							</div>
+							<div class="col-4"><button type="button" class="btn btn-outline-primary w-100"
+									(click)="setViewer('finished')" [ngClass]="{'active': yeoman.viewer == 'finished'}"
+									[ngStyle]="{'box-shadow': yeoman.viewer !== 'finished' ? '0 4px 20px -8px var(--primary)' : ''}">
+									Finalizadas ({{yeoman.ordersFinished.length}})
+								</button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+</header>
+<div class="page-content">
+	<div class="container pt-20 ">
+		<div class="dz-list style-4">
+			<div class="order-list">
+				<ul [hidden]="yeoman.viewer!='new'">
+					<li *ngFor="let order of yeoman.ordersNew; let i = index" >
+						<div class="order-item mb-3">
+							<div class="content flex-1">
+								<h6 class="dz-title mb-1"><a class="text-primary" (click)="setPreviewNew(i)"> {{order.ref}}</a></h6>
+								<h6 class="dz-title font-12" (click)="setPreviewNew(i)"><a>{{order.clientEmail}}</a></h6>
+							</div>
+							<div class="end-content">
+								<span class="date" (click)="setPreviewNew(i)">{{formatDateRelative(order.createdAt) }}</span>
+								<a class="badge outline badge-block" (click)="setPreviewNew(i)" [hidden]="yeoman.type == 'dist'" 
+									[ngClass]="{'badge-outline-success ':  order.status === 'nueva', 'badge-outline-primary ': order.status === 'nueva', 'badge-outline-info ': order.status === 'finished'}">{{
+									order.status }}</a>
+									<span (click)="changeStatusRQ(i)"  class="badge outline badge-block" style="margin: 25px;" [hidden]="visibles|| yeoman.type != 'dist'" [ngClass]="{'badge-outline-success ': order.status === 'nueva', 'badge-outline-primary ': order.status === 'nueva', 'badge-outline-info ': order.status === 'finished'}">{{order.status}}
+									</span>                                              
+									<button  type="button"  style="margin-top: 0px; margin-bottom: 5px; margin-right: 5px;" class="btn btn-primary btn-xxs" (click)="setProcesandoFromNew(i)" [hidden]="!visibles || yeoman.type != 'dist'">En proceso</button>
+									<button  type="button" class="btn btn-outline-primary btn-xxs" (click)="setTerminadaFromNew(i)" style="margin-top: 0px; margin-bottom: 5px; margin-right: 5px;" [hidden]="!visibles || yeoman.type != 'dist'">Terminar</button>
+							</div>
+						</div>
+					</li>
+				</ul>
+				<ul [hidden]="yeoman.viewer!='processing'">
+					<li *ngFor="let order of yeoman.ordersProcessing; let i = index" >
+						<div class="order-item mb-3">
+							<div class="content flex-1">
+								<h6 class="dz-title mb-1"><a class="text-primary" (click)="setPreviewPro(i)"> {{order.ref}}</a></h6>
+								<h6 class="dz-title font-12" (click)="setPreviewPro(i)"><a>{{order.clientEmail}}</a></h6>
+							</div>
+							<div class="end-content">
+								<span class="date" (click)="setPreviewPro(i)">{{formatDateRelative(order.createdAt) }}</span>
+								<!-- <a class="badge outline badge-block"
+									[ngClass]="{'badge-outline-success ': order.status === 'nueva', 'badge-outline-primary ': order.status === 'procesando', 'badge-outline-info ': order.status === 'terminada'}">{{
+									order.status }}</a> -->
+									<span (click)="changeStatusRQ(i)"  class="badge outline badge-block" style="margin: 25px;" [hidden]="visibles"  [ngClass]="{'badge-outline-success ': order.status === 'nueva', 'badge-outline-primary ': order.status === 'procesando', 'badge-outline-info ': order.status === 'terminada'}">{{order.status}}
+									</span> 
+									<button   type="button" class="btn btn-primary btn-xxs" (click)="setTerminadaFromProcessing(i)" style="margin-top: 0px; margin-bottom: 5px; margin-right: 5px;" [hidden]="!visibles || yeoman.type != 'dist'">Terminar</button>
+							</div>
+						</div>
+					</li>
+				</ul>
+				<ul [hidden]="yeoman.viewer!='finished'">
+					<li *ngFor="let order of yeoman.ordersFinished; let i = index" (click)="setPreviewFin(i)">
+						<div class="order-item mb-3">
+							<div class="content flex-1">
+								<h6 class="dz-title mb-1"><a class="text-primary"> {{order.ref}}</a></h6>
+								<h6 class="dz-title font-12"><a>{{order.clientEmail}}</a></h6>
+							</div>
+							<div class="end-content">
+								<span class="date">{{formatDateRelative(order.createdAt) }}</span>
+								<a class="badge outline badge-block"
+									[ngClass]="{'badge-outline-success ': order.status === 'nueva', 'badge-outline-primary ': order.status === 'procesando', 'badge-outline-info ': order.status === 'terminada'}">{{
+									order.status }}</a>
+							</div>
+						</div>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</div>

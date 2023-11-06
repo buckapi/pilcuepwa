@@ -1,0 +1,60 @@
+<header class="header style-2">
+	<div class="main-bar">
+		<div class="container">
+			<div class="header-content">
+				<div class="mid-content mt-2">
+					<h4>Clientes</h4>
+					
+				</div>
+			</div>
+		</div>
+	</div>
+
+</header>
+<div class="page-content">
+	<div class="container pt-20 ">
+		<div class="dz-list style-4">
+			<div class="order-list">
+				<ul>
+					<li *ngFor="let cliente  of yeoman.clientes; let i =index">
+						<div class="order-item mb-3">
+							<div class="content flex-1">
+								<h6 class="dz-title mb-1"><a class="text-primary" > {{cliente.clnombre}} </a></h6>
+								<!-- <h6 class="dz-title font-12" (click)="setPreviewNew(i)"><a>{{order.clientEmail}}</a></h6> -->
+							</div>
+							<div class="end-content">
+
+                                <button class="btn btn-xs btn-primary" data-toggle="modal" data-target="#aAddDietMenus" style="cursor: pointer;"
+                                (click)="selectCli(cliente)" [hidden]="cliente.status === 'active' || cliente.status === 'unavailable'">
+                                Activar acceso
+                            </button>
+                            <span class="badge ligth  badge-outline-success"
+                            [hidden]="cliente.status === 'unactive' || cliente.status === undefined  || cliente.status === 'unavailable'">
+                            Cuenta Activa
+                        </span>
+                        <span class="text-danger"  [hidden]="cliente.status === 'unactive' || cliente.status === 'active'  || cliente.status === undefined    ">
+                            
+                            Acceso suspendido
+                        </span>
+                        <button class="btn  btn-outline-danger btn-xs" (click)="suspend(cliente)"
+                        [hidden]="cliente.status === 'unactive' || cliente.status === undefined ||  cliente.status === 'unavailable'   "
+                        (click)="suspend(i)" style="cursor: pointer; margin-top: 5px; color:red">
+                        Suspender acceso
+                    </button>
+                    <span [hidden]="cliente.status === 'unactive' || cliente.status === undefined ||  cliente.status === 'active'   ">
+                      
+                        <button class="btn  btn-outline-primary btn-xs" (click)="reactivate(cliente)" (click)="suspend(i)"
+                            style="cursor: pointer;">
+                            restablecer acceso
+                        </button>
+                    </span>
+							
+                    </div>
+						</div>
+					</li>
+				</ul>
+                
+			</div>
+		</div>
+	</div>
+</div>
