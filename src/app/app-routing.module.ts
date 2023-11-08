@@ -32,7 +32,9 @@ const routes: Routes = [
   
 { path: 'mobDistClients', loadChildren: () => import('./components/mob-distClients/mob-dist-clients.module').then(m => m.MobDistClientsModule) },
   
-{ path: 'homePhotographer', loadChildren: () => import('./components/homePhotographer/home-protographer.module').then(m => m.HomeProtographerModule) }];
+{ path: 'homePhotographer', loadChildren: () => import('./components/homePhotographer/home-protographer.module').then(m => m.HomeProtographerModule) },
+  
+{ path: 'services', loadChildren: () => import('./components/services/services.module').then(m => m.ServicesModule) }];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],

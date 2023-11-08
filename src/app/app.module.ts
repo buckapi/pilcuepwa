@@ -9,6 +9,7 @@ import { AppComponent } from './app.component';
 import { NgxUsefulSwiperModule } from 'ngx-useful-swiper';
 import { LazyLoadImageModule } from 'ng-lazyload-image';
 import { HeaderPhotographerComponent } from './components/ui/header-photographer/header-photographer.component';
+import { FooterPhotographerComponent } from './components/ui/footer-photographer/footer-photographer.component';
 import { HeaderComponent } from './components/shared/header/header.component';
 import { FloatyComponent } from './components/shared/floaty/floaty.component';
 import { NavigationComponent } from './components/shared/navigation/navigation.component';
@@ -42,6 +43,7 @@ import { MobUiModule } from './components/mob-ui/mob-ui.module';
     MessageComponent,
     SwiperComponent,
     HeaderPhotographerComponent,
+    FooterPhotographerComponent,
     SubheaderComponent,
     ProductGridComponent,
     PopUpComponent,
