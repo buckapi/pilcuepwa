@@ -12,46 +12,45 @@
         </div>
         <!-- mobile nav end-->	
         <!-- share btn-->	
-        <div class="share-btn isShare show-share"> <span>Share  <i class="fal fa-chevron-up"></i></span></div>
-        <!-- share btn end-->	
+<!--         <div class="share-btn isShare show-share"> <span>Share  <i class="fal fa-chevron-up"></i></span></div>
+ -->        <!-- share btn end-->	
         <!--  navigation -->
         <div class="nav-holder main-menu">
             <nav>
                 <ul>
                     <li>
-                        <a href="index.html#" class="act-link">Home </a>
-                        <!--second level -->
+                        <a [routerLink]="['./']">Inicio </a>
                        
                     </li>
                     <li>
-                        <a href="index.html#">Portfolio </a>
-                        <!--second level -->
-                        <ul>
+                        <a [routerLink]="['./portfolio']">Portafolio </a>
+                       
+                        <!-- <ul>
                             <li><a href="portfolio.html">Horizontal Grid </a></li>
                             <li><a href="portfolio2.html">Vertical Grid</a></li>
                             <li><a href="portfolio3.html">Column Grid</a></li>
                             <li>
                                 <a href="index.html#">Single </a>
-                                <!--third  level -->
+                             
                                 <ul>
                                     <li><a href="portfolio-single.html">Style 1</a></li>
                                     <li><a href="portfolio-single2.html">Style 2</a></li>
                                     <li><a href="portfolio-single3.html">Style 3</a></li>
                                     <li><a href="portfolio-single4.html">Style 4</a></li>
                                 </ul>
-                                <!--third level end-->
+                              
                             </li>
-                        </ul>
-                        <!--second level end-->
+                        </ul> -->
+                        
                     </li>
                     <li>
-                        <a href="about.html">About</a>
+                        <a [routerLink]="['./about']">Sobre mi</a>
                     </li>
                     <li>
                         <a [routerLink]="['./services']">Servicios</a>
                     </li>
                     <li>
-                        <a href="contacts.html">Contacts</a>
+                        <a [routerLink]="['./contact']">Contacto</a>
                     </li>
                 </ul>
             </nav>
@@ -66,3 +65,16 @@
         <!-- share-wrapper end -->  
     </div>
 </header>
+
+<div class="aside-column">
+    <!-- social_links-->
+    <div class="header_social">
+        <ul>
+            <li><a href="index.html#" target="_blank">Fb</a></li>
+            <li><a href="index.html#" target="_blank">Ins</a></li>
+            <li><a href="index.html#" target="_blank">Tw</a></li>
+            <li><a href="index.html#" target="_blank">Tic</a></li>
+        </ul>
+    </div>
+    <!-- social_links end-->			
+</div>

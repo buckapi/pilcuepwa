@@ -34,7 +34,9 @@ const routes: Routes = [
   
 { path: 'homePhotographer', loadChildren: () => import('./components/homePhotographer/home-protographer.module').then(m => m.HomeProtographerModule) },
   
-{ path: 'services', loadChildren: () => import('./components/services/services.module').then(m => m.ServicesModule) }];
+{ path: 'services', loadChildren: () => import('./components/services/services.module').then(m => m.ServicesModule) },
+  
+{ path: 'about', loadChildren: () => import('./components/about/about.module').then(m => m.AboutModule) }];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
