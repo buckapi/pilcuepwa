@@ -91,8 +91,8 @@ export class AppComponent implements AfterViewInit {
     public dataApiService: DataApiService,
     public script: ScriptService
   ) {
-    this.script.load(
-      'main')
+    // this.script.load( 'main')
+    this.script.load( 'script')
     this._butler.data = this.data;
   }
   config: SwiperOptions = {

@@ -76,7 +76,7 @@ export class HomeComponent implements OnInit {
     this.currentUser = JSON.parse(userStr);
     // this.obtenerExistencias();
     if (!this.authRESTService.getCurrentUser()) {
-      this.router.navigate(['/login'])
+      // this.router.navigate(['/login'])
     }
   }
   config: SwiperOptions = {
