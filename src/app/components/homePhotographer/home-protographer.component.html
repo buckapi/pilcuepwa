@@ -6,10 +6,10 @@
                 <div class="content-holder">
                     <!-- hero-carousel-wrapper -->
                     <div class="hero-carousel-wrapper hfs_wrap">
-                        <div class="fs-slider fw-carousel2 lightgallery fw-carousel_hight full-height fs-anim-t" data-mousecontrol2="true">
-                            <div class="swiper-container  ">
-                                <div class="swiper-wrapper" >
-                                    <!-- swiper-slide-->
+                        <div class=" fw-carousel2 lightgallery fw-carousel_hight full-height fs-anim-t" data-mousecontrol2="true">
+                               
+                                <swiper [config]="config">
+                                    <div class="swiper-wrapper">
                                     <div class="swiper-slide hov_zoom">
                                         <div class="anim-fw" >
                                             <img src="assets/photographer/images/folio/3.jpg" alt="">
@@ -70,22 +70,24 @@
                                     </div>
                                     <!-- swiper-slide end-->
                                 </div>
-                            </div>
+                                </swiper>
                         </div>
-                        <div class="ccsw   fwc_btn fwc_btn2 fwc_btn_prev ccsw-prev">
-                            <i class="fal fa-angle-left"></i>
+                        <!--  <div class="swiper-button-next"></div>
+                        <div class="swiper-button-prev"></div>  -->
+                        <div class=" ccsw   fwc_btn fwc_btn2 fwc_btn_prev ccsw-prev swiper-button-prev">
+                             <!-- <i class="fal fa-angle-left"></i> --> 
                         </div>
-                        <div class="ccsw   fwc_btn fwc_btn2 fwc_btn_next ccsw-next">
-                            <i class="fal fa-angle-right"></i>
-                        </div>
+                        <div class=" ccsw   fwc_btn fwc_btn2 fwc_btn_next ccsw-next swiper-button-next">
+                             <!-- <i class="fal fa-angle-right"></i>  -->
+                        </div> 
                     </div>
                     <!-- fixed-bottom-container -->
                     <div class="fixed-bottom-container hid-mob">
-                        <div class="scroll-down-wrap">
+                        <!-- <div class="scroll-down-wrap">
                             <div class="mousey">
                                 <div class="scroller"></div>
                             </div>
-                        </div>
+                        </div> -->
                         <div class="hero-slider-wrap_pagination-wrap">
                             <div class="hero-slider-wrap_pagination hero-slider-pag"></div>
                         </div>

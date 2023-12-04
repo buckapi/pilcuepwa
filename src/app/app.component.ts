@@ -94,6 +94,15 @@ export class AppComponent implements AfterViewInit {
     // this.script.load( 'main')
     this.script.load( 'script')
     this._butler.data = this.data;
+    this.script.load(
+      'jquery',
+      'plugins',
+      'script'
+          )
+          .then(data => {
+            // this.yeoman.isLoaded=true;
+          })
+          .catch(error => console.log(error)); 
   }
   config: SwiperOptions = {
     a11y: { enabled: true },

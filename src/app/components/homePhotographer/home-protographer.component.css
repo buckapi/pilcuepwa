@@ -1,0 +1,11 @@
+
+.swiper-button-next  {
+    --swiper-theme-color: #000;
+    --swiper-navigation-size: 35px;
+    width: calc(var(--swiper-navigation-size) / 44 * 44);
+  }
+.swiper-button-prev{
+    --swiper-theme-color: #000;
+    --swiper-navigation-size: 35px;
+    width: calc(var(--swiper-navigation-size) / 44 * 44);
+}
