@@ -6,7 +6,7 @@ import { Injectable } from '@angular/core';
 
 
 export class Yeoman {
-  imagesUrl="https://www.click2order.app/img-API/server/local-storage/tixsImages/"
+  imagesUrl="https://www.buckapi.com/imgApi/server/local-storage/tixsImages/"
   loadingAdd:boolean=true;
   viewer = 'new';
   distName="";
@@ -70,7 +70,7 @@ totalOrder:any=0;
       GQLUrl: string;
     } = {
       name: "default",
-      restUrl: "https://db.click2order.app:7777",
+      restUrl: "https://db.buckapi.com:9040",
       GQLUrl: "<origin GQL url>",
     };
     constructor() {}
@@ -109,7 +109,7 @@ totalOrder:any=0;
       this.config.clientSelected = -1;
       this.origin = {
         name: "default",
-        restUrl: "https://db.click2order.app:7777",
+        restUrl: "https://db.buckapi.com:9040",
         GQLUrl: "<origin GQL url>",
       };
     }
