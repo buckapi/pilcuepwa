@@ -32,12 +32,15 @@ export class Yeoman {
   // catalogo: Articulo[][] = [];
   ordersNew:any[]=[];
   descuentos:any[]=[];
-  categories:any[]=[];
+ /*  categories:any[]=[]; */
   ordersProcessing:any[]=[];
   ordersFinished:any[]=[];
   articulos:any[][]=[];
 totalOrder:any=0;
   orderSize=0;
+
+  categories:any={};
+  allcategory:any=[];
   
   neworder: { articulo: any; iva:any,cantidad: number;precioConDescuento:number ,descuentoIndex:number}[] = [];
  

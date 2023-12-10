@@ -10,6 +10,7 @@ import { SwiperOptions } from 'swiper';
   styleUrls: ['./home-protographer.component.css']
 })
 export class HomeProtographerComponent implements OnInit {
+  categories:any;
   config: SwiperOptions = {
     a11y: { enabled: true },
     direction: 'horizontal',
@@ -26,10 +27,16 @@ export class HomeProtographerComponent implements OnInit {
   };
   constructor(
     public yeoman: Yeoman,
-    public dataServices: DataApiService,
+    public dataApi: DataApiService,
     
-  ) { }
-
+  ) { 
+    this.loadCategories();
+  }
+  loadCategories(){
+    this.dataApi.getAllCategory().subscribe(response=>{
+      this.categories=response;
+    });
+  }
   ngOnInit(): void {
   }
 

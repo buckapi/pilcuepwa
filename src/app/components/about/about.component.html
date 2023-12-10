@@ -75,23 +75,23 @@
                             <!-- serv-wrap-->
                             <div class="serv-wrap fl-wrap">
                                 <!-- serv-item -->
-                                <div class="serv-item">
+                                <div class="serv-item" *ngFor="let category of categories; let i = index"  style="cursor: pointer;">
                                     <div class="serv-media">
-                                        <img src="assets/photographer/images/folio/17.jpg" alt="">
+                                        <img src="{{category.images[0]}}" alt="">
                                     </div>
                                     <div class="serv-text">
-                                        <h4><a >Actos de grado</a></h4>
-                                        <p> Sed blandit, dolor id aliquam vestibulum, nibh elit imperdiet turpis, quis molestie quam erat vel nisi.</p>
-                                        <ul>
+                                        <h4><a >{{ category.name }}</a></h4>
+                                        <p> {{category.description1}}</p>
+                                        <!-- <ul>
                                             <li><a >Filming</a></li>
                                             <li><a >Montage</a></li>
                                             <li><a >Slow motion</a></li>
-                                        </ul>
+                                        </ul> -->
                                         <div class="serv-price">Price :<span> $350-$900</span></div>
                                     </div>
                                 </div>
-                                 <!-- serv-item end -->
-                                <div class="serv-item">
+                                
+                                <!-- <div class="serv-item">
                                     <div class="serv-media">
                                         <img src="assets/photographer/images/folio/6.jpg" alt="">
                                     </div>
@@ -107,7 +107,7 @@
                                     </div>
                                 </div>
                                
-                                <!-- serv-item -->
+                               
                                 <div class="serv-item">
                                     <div class="serv-media">
                                         <img src="assets/photographer/images/folio/17.jpg" alt="">
@@ -123,7 +123,7 @@
                                         <div class="serv-price">Price :<span> $350-$900</span></div>
                                     </div>
                                 </div>
-                                <!-- serv-item end -->
+                               
                                 <div class="serv-item">
                                     <div class="serv-media">
                                         <img src="assets/photographer/images/folio/17.jpg" alt="">
@@ -139,7 +139,7 @@
                                         <div class="serv-price">Price :<span> $350-$900</span></div>
                                     </div>
                                 </div>
-                                <!-- serv-item end -->
+                               
                                 <div class="serv-item">
                                     <div class="serv-media">
                                         <img src="assets/photographer/images/folio/17.jpg" alt="">
@@ -156,7 +156,7 @@
                                     </div>
                                 </div>
                                 
-                                <!-- serv-item end -->
+                               
                                 <div class="serv-item">
                                     <div class="serv-media">
                                         <img src="assets/photographer/images/folio/17.jpg" alt="">
@@ -172,9 +172,9 @@
                                         <div class="serv-price">Price :<span> $350-$900</span></div>
                                     </div>
                                 </div>
-                                <!-- serv-item end -->
                                
-                                <!-- serv-item end -->
+                               
+                               
                                 <div class="serv-item">
                                     <div class="serv-media">
                                         <img src="assets/photographer/images/folio/17.jpg" alt="">
@@ -189,8 +189,8 @@
                                         </ul>
                                         <div class="serv-price">Price :<span> $350-$900</span></div>
                                     </div>
-                                </div>
-                                <!-- serv-item end -->
+                                </div> -->
+                               
                             </div>
                             <!-- serv-wrap end -->
 <!--                             <p>Praesent nec leo venenatis elit semper aliquet id ac enim. Maecenas nec mi leo. Etiam venenatis ut dui non hendrerit. Integer dictum, diam vitae blandit accumsan, dolor odio tempus arcu, vel ultrices nisi nibh vitae ligula. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi varius lacinia vestibulum. Aliquam lobortis facilisis tellus, in facilisis ex vehicula ac. In malesuada quis turpis vel viverra.</p>

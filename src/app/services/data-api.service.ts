@@ -167,6 +167,10 @@ export class DataApiService {
 		this.clients = this.http.get(url_api);
 		return ( this.http.get(url_api));		
 	}
+	getAllCategory(){
+		const url_api = 	this.yeoman.origin.restUrl+'/api/categories';
+		return this.http.get(url_api);
+	}
 
 
 	getAllDists() {
